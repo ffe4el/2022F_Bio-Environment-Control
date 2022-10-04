@@ -1,43 +1,61 @@
-import tensorflow as tf
 import cv2
+import PIL.Image, PIL.ImageTk
+from tkinter import *
 import numpy as np
 from urllib.request import urlopen
-import requests
-from http.client import IncompleteRead
 
-# Define the input size of the model
-input_size = (224, 224)
+class App:
+    def __init__(self, window):
+        #화면 생성
+        self.width, self.height = 320, 320
+        self.window = window
+        self.window.geometry("320x320")
+        self.window.title("Read ESP32-CAM")
+        self.window.bind('<Key>', self.keyPressed)
+        self.buffer = b''
+        #esp-cap stream
+        url = "http://192.168.219.112/capture" #Your url
+        self.stream = urlopen(url)
 
-# Open streaming url
-# change to ESP32-CAM ip
+        self.canvas = Canvas(window, width = self.width, height = self.height)
+        self.canvas.pack()
+        self.delay = 1
+        self.isCaputure = 0
+        self.update()
+        self.window.mainloop()
 
-url = "http://192.168.219.112/capture"
-# url = "http://192.168.219.112:81/stream"
-CAMERA_BUFFER_SIZE = 4096
-stream = urlopen(url)
-bts = b''
+    def keyPressed(self, event):
+        print(event.char)
+        if event.char == 'a':#현재 화면을 사진으로 저장
+            self.isCaputure = 1
+            
+        if event.char == 'q':#종료하기
+            self.window.destroy()
 
-# Load the saved model
-model = tf.keras.models.load.model("keras_model.h5", complie=False)
+    def update(self):
+        while True:
+            #촬영 데이타 받아오기
+            self.buffer += self.stream.read(2560)
+            head = self.buffer.find(b'\xff\xd8')
+            end = self.buffer.find(b'\xff\xd9')
+            try:
+                if head > -1 and end > -1:
+                    #촬영 데이타를 jpg로 변환하기
+                    jpg = self.buffer[head:end+2]
+                    self.buffer = self.buffer[end+2:]
+                    img = cv2.imdecode(np.frombuffer(jpg, dtype=np.uint8), cv2.IMREAD_UNCHANGED)
+                    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                    img = cv2.resize(img, (320, 320))
+                    # frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)  # vertical
+                    #사진 파일로 저장하기
+                    if self.isCaputure:
+                        cv2.imwrite('capture' + ".jpg", img)
+                        self.isCaputure = 0
+                    self.photo = PIL.ImageTk.PhotoImage(image=PIL.Image.fromarray(img))
+                    self.canvas.create_image(0, 0, image = self.photo, anchor = NW)
+                    break
+            except:
+                pass
+        self.window.after(ms=self.delay, func=self.update)
 
-oldURL = ''
-while True:
-    try:
-        bts += stream.read(CAMERA_BUFFER_SIZE)
-    except IncompleteRead:
-        print("streaming error has occurred")
-
-    jpghead = bts.find(b'\xff\xd8')
-    jpgend = bts.find(b'\xff\xd9')
-
-    if jpghead > -1 and jpgend > -1:
-        jpg = bts[jpghead:jpgend + 2]
-        bts = bts[jpgend +2:]
-        img = cv2.imdecode(np.frombuffer(jpg, dtype = np.unit8), cv2.IMREAD_UNCANGED)
-        v = cv2.flip(img, 0)
-        h = cv2.flip(img, 1)
-        p = cv2.flip(img, -1)
-        frame = pdbh, w = frame.shape[:2]
-        img = cv2.resize(frame, (888, 688))
-
-
+App(Tk())
