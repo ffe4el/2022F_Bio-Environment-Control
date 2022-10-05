@@ -11,7 +11,7 @@ input_size = (224, 224)
 # Open streaming url
 # change to ESP32-CAM ip
 
-url = "http://192.168.219.112/capture"
+url = "http://192.168.0.72/"
 # url = "http://192.168.219.112:81/stream"
 CAMERA_BUFFER_SIZE = 4096
 stream = urlopen(url)

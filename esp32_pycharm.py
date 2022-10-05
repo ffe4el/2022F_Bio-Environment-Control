@@ -14,7 +14,7 @@ class App:
         self.window.bind('<Key>', self.keyPressed)
         self.buffer = b''
         #esp-cap stream
-        url = "http://192.168.219.112/capture" #Your url
+        url = "http://192.168.0.72" #Your url
         self.stream = urlopen(url)
 
         self.canvas = Canvas(window, width = self.width, height = self.height)
