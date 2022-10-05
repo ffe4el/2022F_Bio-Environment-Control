@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa41eb9-77a4-4225-9fe6-04083d525236" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/classification_card/cam_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classification_card/esp32_pycharm.py" beforeDir="false" afterPath="$PROJECT_DIR$/classification_card/esp32_pycharm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cam_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/cam_test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/esp32_pycharm.py" beforeDir="false" afterPath="$PROJECT_DIR$/esp32_pycharm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +62,11 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control" />
+    </key>
+  </component>
   <component name="RunManager" selected="JavaScript 디버그.cam_test.html">
     <configuration name="cam_test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/2022F_Bio-Environment-Control/cam_test.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -122,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664874932793</updated>
       <workItem from="1664874934186" duration="4863000" />
-      <workItem from="1664956270269" duration="1040000" />
+      <workItem from="1664956270269" duration="1714000" />
     </task>
     <servers />
   </component>
