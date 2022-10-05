@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from urllib.request import urlopen
 
-url = "http://192.168.0.12/stream" #ESP CAM의 영상 스트리밍 주소
+url = "http://192.168.0.72/" #ESP CAM의 영상 스트리밍 주소
 stream = urlopen(url)
 buffer = b''
 
