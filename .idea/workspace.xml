@@ -13,6 +13,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cam_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/cam_python.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cam_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/cam_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control_serv.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_serv.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664874932793</updated>
       <workItem from="1664874934186" duration="4863000" />
-      <workItem from="1664956270269" duration="8007000" />
+      <workItem from="1664956270269" duration="8388000" />
     </task>
     <servers />
   </component>
