@@ -75,3 +75,5 @@ def camera():
     #         break
     # 
     # cv2.destroyAllWindows()
+    
+    return msg_card
