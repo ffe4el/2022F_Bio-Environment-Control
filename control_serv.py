@@ -99,8 +99,10 @@ def window_close():
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(camera(),
+    a = Response(camera(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+    b = camera()
+    return a, b
 
 
 app.run(host="0.0.0.0")
