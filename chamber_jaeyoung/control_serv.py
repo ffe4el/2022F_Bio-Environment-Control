@@ -10,7 +10,6 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
-# from cam_python import camera
 from flask_cors import cross_origin
 
 
