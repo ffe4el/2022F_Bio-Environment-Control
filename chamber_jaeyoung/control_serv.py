@@ -101,14 +101,16 @@ def index():
 @app.route('/result_control')
 @cross_origin(origin='*')
 def result_control():
-    if msg_card == "Card 1":
-        return send_signal_to_sfarm("C_F-0")
-    elif msg_card == "Card 2":
-        return send_signal_to_sfarm("C_F-1")
-    elif msg_card == "Card 3":
-        return send_signal_to_sfarm("C_L-0")
-    elif msg_card == "It's not card":
-        return send_signal_to_sfarm("C_L-5")
+    while True:
+        if msg_card == "Card 1":
+            return send_signal_to_sfarm("C_F-0")
+        elif msg_card == "Card 2":
+            return send_signal_to_sfarm("C_F-1")
+        elif msg_card == "Card 3":
+            return send_signal_to_sfarm("C_L-0")
+        elif msg_card == "It's not card":
+            return send_signal_to_sfarm("C_L-5")
+
 
 
 @app.route("/current_msg")
