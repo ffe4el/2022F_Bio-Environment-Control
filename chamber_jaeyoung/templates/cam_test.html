@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cam Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <p>Current msg: </p>
+    <p id="current_msg"></p>
+</div>
+
+<!--add div result_control-->
+<div>
+    <p>Environment msg: </p>
+    <p id="result_control"></p>
+</div>
+
+<iframe src="http://192.168.0.66:5000/" title="Teachable Cam Test" width="224" height="224" style="border:1px solid black;"></iframe>
+
+<script>
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://192.168.0.66:5000/current_msg",
+        success:function(data)
+        {
+            $("#current_msg").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); //10000 milliseconds = 10 seconds
+
+<!--add result_control javascript-->
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://192.168.0.66:5000/result_control",
+        success:function(data)
+        {
+            $("#result_control").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); //10000 milliseconds = 10 seconds
+</script>
+
+</body>
+</html>
