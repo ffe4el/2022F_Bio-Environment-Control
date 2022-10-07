@@ -97,8 +97,8 @@ def camera_local():
 def index():
     return Response(camera_local(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/result_control')
-@cross_origin(origin='*')
+# @app.route('/result_control')
+# @cross_origin(origin='*')
 def result_control():
     if msg_card == "Card 1":
         return send_signal_to_sfarm("C_F-1")
@@ -189,5 +189,11 @@ def window_close():
     send_signal_to_sfarm("C_S-0")
     return "Order window close"
 
-
-app.run(host="0.0.0.0", threaded=True)
+def main():    
+    app.run(host="0.0.0.0", threaded=True)
+    result_control()
+    
+if __name__ == '__main__':
+    main()
+    
+    
