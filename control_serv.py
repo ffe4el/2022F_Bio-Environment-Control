@@ -11,7 +11,7 @@ from matplotlib import animation
 import matplotlib
 from flask import Flask, render_template, Response
 from flask import Flask, render_template, Response
-from cam_python import camera
+import cam_python
 
 app = Flask(__name__)
 #10번 포트에 연결된 serial을 s로 지정(채널:9600)
@@ -20,7 +20,7 @@ s = serial.Serial('COM3', 9600)
 
 @app.route('/')
 def index():
-    return 'Index Page'
+    return f'{cam_python.msg_card}'
 
 
 
@@ -96,13 +96,6 @@ def window_open():
 def window_close():
     send_signal_to_sfarm("C_S-0")
     return "Order window close"
-
-@app.route('/video_feed')
-def video_feed():
-    a = Response(camera(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
-    b = camera()
-    return a, b
 
 
 app.run(host="0.0.0.0")
