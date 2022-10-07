@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
-from cam_python import camera
+# from cam_python import camera
 from flask_cors import cross_origin
 
 
@@ -102,9 +102,9 @@ def index():
 @cross_origin(origin='*')
 def result_control():
     if msg_card == "Card 1":
-        return send_signal_to_sfarm("C_F-1")
-    elif msg_card == "Card 2":
         return send_signal_to_sfarm("C_F-0")
+    elif msg_card == "Card 2":
+        return send_signal_to_sfarm("C_F-1")
     elif msg_card == "Card 3":
         return send_signal_to_sfarm("C_L-0")
     elif msg_card == "It's not card":

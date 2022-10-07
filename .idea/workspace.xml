@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa41eb9-77a4-4225-9fe6-04083d525236" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/chamber_jaeyoung/keras_model.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -12,8 +13,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cam_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/cam_python.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cam_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/cam_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control_serv.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_serv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cam_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/cam_test1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control_serv.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_serv1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/2022F_Bio-Environment-Control/classification_card",
+    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/2022F_Bio-Environment-Control/chamber_jaeyoung",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,14 +66,15 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control\chamber_jaeyoung" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control\classification_card" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.control_serv">
-    <configuration name="cam_test.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/2022F_Bio-Environment-Control/cam_test.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Python.control_serv (1)">
+    <configuration name="cam_test1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/2022F_Bio-Environment-Control/cam_test1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="cam_python" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -97,7 +99,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="control_serv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="control_serv (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="2022F_Bio-Environment-Control" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chamber_jaeyoung" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chamber_jaeyoung/control_serv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="control_serv1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2022F_Bio-Environment-Control" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -110,29 +134,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/control_serv.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="esp32_pycharm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="2022F_Bio-Environment-Control" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/classification_card" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classification_card/esp32_pycharm.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control\control_serv1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.control_serv" />
+        <item itemvalue="Python.control_serv (1)" />
+        <item itemvalue="Python.control_serv1" />
         <item itemvalue="Python.cam_python" />
         <item itemvalue="Python.esp32_pycharm" />
-        <item itemvalue="JavaScript 디버그.cam_test.html" />
-        <item itemvalue="Python.esp32_pycharm (1)" />
+        <item itemvalue="JavaScript 디버그.cam_test1.html" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664874932793</updated>
       <workItem from="1664874934186" duration="4863000" />
-      <workItem from="1664956270269" duration="20937000" />
+      <workItem from="1664956270269" duration="22879000" />
     </task>
     <servers />
   </component>
@@ -201,6 +203,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv__1_.coverage" NAME="control_serv (1) 커버리지 결과" MODIFIED="1665157955124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$esp32_pycharm.coverage" NAME="esp32_pycharm 커버리지 결과" MODIFIED="1664960402702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$esp32_pycharm__1_.coverage" NAME="esp32_pycharm (1) 커버리지 결과" MODIFIED="1664956829797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_card" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$cam_python.coverage" NAME="cam_python 커버리지 결과" MODIFIED="1665051520716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
