@@ -11,12 +11,6 @@
     <p id="current_msg"></p>
 </div>
 
-<!--add div result_control-->
-<div>
-    <p>Environment msg: </p>
-    <p id="result_control"></p>
-</div>
-
 <iframe src="http://192.168.0.66:5000/" title="Teachable Cam Test" width="224" height="224" style="border:1px solid black;"></iframe>
 
 <script>
@@ -28,20 +22,6 @@ setInterval(function()
         success:function(data)
         {
             $("#current_msg").html(data);
-            // console.log(data);
-        }
-    });
-}, 500); //10000 milliseconds = 10 seconds
-
-<!--add result_control javascript-->
-setInterval(function()
-{
-    $.ajax({
-        type: "get",
-        url: "http://192.168.0.66:5000/result_control",
-        success:function(data)
-        {
-            $("#result_control").html(data);
             // console.log(data);
         }
     });
