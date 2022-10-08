@@ -75,7 +75,7 @@ def camera_local():
                     msg_card = "It's not card"
                     # send_signal_to_sfarm("C_S-1")
 
-                msg_card += " ({:.1f})%".format(is_card_prob[is_card] * 100)
+                # msg_card += " ({:.1f})%".format(is_card_prob[is_card] * 100)
 
                 cv2.putText(frame, msg_card, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (225, 0, 0), thickness=2)
 
@@ -101,15 +101,14 @@ def index():
 # @app.route('/result_control')
 # @cross_origin(origin='*')
 def result_control():
-    while True:
-        if msg_card == "Card 1":
-            return send_signal_to_sfarm("C_F-0")
-        elif msg_card == "Card 2":
-            return send_signal_to_sfarm("C_F-1")
-        elif msg_card == "Card 3":
-            return send_signal_to_sfarm("C_L-0")
-        elif msg_card == "It's not card":
-            return send_signal_to_sfarm("C_L-5")
+    if msg_card == "Card 1":
+        send_signal_to_sfarm("C_F-0")
+    elif msg_card == "Card 2":
+        send_signal_to_sfarm("C_F-1")
+    elif msg_card == "Card 3":
+        send_signal_to_sfarm("C_L-0")
+    elif msg_card == "It's not card":
+        send_signal_to_sfarm("C_L-1")
 
 
 
