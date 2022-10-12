@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa41eb9-77a4-4225-9fe6-04083d525236" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/chamber_hyejin/cam_python.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chamber_hyejin/keras_model.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chamber_hyejin/templates/cam_test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -55,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/sol/2022-2/bigdata_lec",
+    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/sol/2022F_Bio-Environment-Control/chamber_hyejin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +68,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_hyejin" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control\chamber_jaeyoung" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control\classification_card" />
     </key>
@@ -184,6 +188,7 @@
       <updated>1664874932793</updated>
       <workItem from="1664874934186" duration="4863000" />
       <workItem from="1664956270269" duration="23483000" />
+      <workItem from="1665567960838" duration="211000" />
     </task>
     <servers />
   </component>
