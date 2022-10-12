@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa41eb9-77a4-4225-9fe6-04083d525236" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/chamber_hyejin/cam_python.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chamber_hyejin/keras_model.h5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chamber_hyejin/templates/cam_test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -16,6 +13,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cam_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/cam_python.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cam_test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/cam_test1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_hyejin/cam_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/cam_python.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_hyejin/templates/cam_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/templates/cam_test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/control_serv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_serv1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +187,7 @@
       <updated>1664874932793</updated>
       <workItem from="1664874934186" duration="4863000" />
       <workItem from="1664956270269" duration="23483000" />
-      <workItem from="1665567960838" duration="211000" />
+      <workItem from="1665567960838" duration="798000" />
     </task>
     <servers />
   </component>
