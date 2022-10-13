@@ -283,6 +283,11 @@ while True:
     schedule.every(10).seconds.do(summer_third2)
     schedule.every(10).seconds.do(winter_third2)
     schedule.every(10).seconds.do(rain_third2)
+    
+    # 개화 적온
+    schedule.every(10).seconds.do(summer_forth)
+    schedule.every(10).seconds.do(winter_forth)
+    schedule.every(10).seconds.do(rain_forth)
 
     # 과비대 적온
     schedule.every(10).seconds.do(summer_fifth)
