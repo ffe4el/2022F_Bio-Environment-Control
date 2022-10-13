@@ -294,5 +294,5 @@ while True:
     schedule.every(10).seconds.do(winter_fifth)
     schedule.every(10).seconds.do(rain_fifth)
 
-    if keyborad.is_pressed("q"):
+    if keyboard.is_pressed("q"):
         break
