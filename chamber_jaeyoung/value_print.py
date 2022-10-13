@@ -4,7 +4,8 @@ import serial
 import json
 import keyboard
 
-s = serial.Serial('COM3', 9600)
+s = serial.Serial('COM3', 9600) #아두이노 메가
+ss = serial.Serial('COM6', 9600) #아두이노 우노
 
 # 아두이노로 신호 송신
 def send_signal_to_sfarm(msg):
@@ -26,7 +27,9 @@ def send_signal_to_sfarm(msg):
         s.write("{}\n".format(msg).encode())
 
 def send_signal_to_ssfarm(msg):
-    pass
+    if (ss.readable()):
+        ss.write("{}\n".format(msg).encode())
+        time.sleep(0.2)
 
 
 # 여름 1단계
@@ -42,6 +45,8 @@ def summer_first():
     # window
     send_signal_to_sfarm("C_S-1")
 
+    print("h2")
+
 # 여름 2단계
 def summer_second():
     # fan
@@ -54,7 +59,7 @@ def summer_second():
     send_signal_to_ssfarm("B0")
     # window
     send_signal_to_sfarm("S1")
-
+    print("h3")
 
 # 여름 3-1단계
 def summer_third1():
@@ -267,6 +272,9 @@ def rain_fifth():
 
 # 초 단위로 실행
 while True:
+
+    schedule.run_pending()
+
     # 발아 적온
     schedule.every(10).seconds.do(summer_first)
     schedule.every(10).seconds.do(winter_first)

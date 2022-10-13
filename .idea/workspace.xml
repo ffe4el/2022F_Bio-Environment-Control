@@ -15,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/cam_test1.html" beforeDir="false" afterPath="$PROJECT_DIR$/cam_test1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_hyejin/cam_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/cam_python.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_hyejin/templates/cam_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/templates/cam_test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/value_print.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/value_print.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/control_serv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_serv1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,20 +52,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/sol/2022F_Bio-Environment-Control/chamber_hyejin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/OneDrive/바탕 화면/sol/2022F_Bio-Environment-Control/chamber_hyejin&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_hyejin" />
@@ -75,10 +76,7 @@
       <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.control_serv (1)">
-    <configuration name="cam_test1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/2022F_Bio-Environment-Control/cam_test1.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.value_print">
     <configuration name="cam_python" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2022F_Bio-Environment-Control" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,13 +165,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="value_print" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="2022F_Bio-Environment-Control" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chamber_jaeyoung" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chamber_jaeyoung/value_print.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.value_print" />
         <item itemvalue="Python.control_serv (1)" />
         <item itemvalue="Python.control_serv1" />
         <item itemvalue="Python.cam_python" />
         <item itemvalue="Python.esp32_pycharm" />
-        <item itemvalue="JavaScript 디버그.cam_test1.html" />
       </list>
     </recent_temporary>
   </component>
@@ -209,6 +229,7 @@
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv__1_.coverage" NAME="control_serv (1) 커버리지 결과" MODIFIED="1665161582177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$esp32_pycharm.coverage" NAME="esp32_pycharm 커버리지 결과" MODIFIED="1664960402702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$esp32_pycharm__1_.coverage" NAME="esp32_pycharm (1) 커버리지 결과" MODIFIED="1664956829797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_card" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$value_print.coverage" NAME="value_print 커버리지 결과" MODIFIED="1665644894443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$cam_python.coverage" NAME="cam_python 커버리지 결과" MODIFIED="1665051520716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv.coverage" NAME="control_serv 커버리지 결과" MODIFIED="1665115865243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
