@@ -8,7 +8,7 @@ import winsound as ws
 # 아두이노 메가
 s = serial.Serial('COM3', 9600)
 #아두이노 우노
-ss = serial.Serial('COM6', 9600) #아두이노 우노
+ss = serial.Serial('COM6', 9600)  #아두이노 우노
 
 # 아두이노 메가로 신호 송신
 def send_signal_to_sfarm(msg):
@@ -19,16 +19,21 @@ def send_signal_to_sfarm(msg):
 
         if not z.decode().startswith("#"):
             z = z.decode()[:len(z) - 1]
-            print("내용출력:", end="")
-            print(z)
+            # print("내용출력:", end="")
+            # print(z)
             if z.startswith("{ \"temp"):
                 data = json.loads(z)
                 temp = int(data["temp"])
-
+                humid = int(data["humidity"])
+                cdc = int(data['cdc'])
+                print(temp)
         else:
             break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
+
+    # humid = int(data['humidity'])
+    # cdc = int(data['cdc'])
 
 # 아두이노 우노로 신호 송신
 def send_signal_to_ssfarm(msg):
@@ -42,8 +47,11 @@ def beepsound():
     dur = 150    # ms
     ws.Beep(freq, dur) # winsound.Beep(frequency, duration)
 
+
 # 여름 1단계
 def summer_first():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-0")
     # heat
@@ -65,6 +73,8 @@ def summer_first():
 
 # 여름 2단계
 def summer_second():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -86,6 +96,8 @@ def summer_second():
 
 # 여름 3-1단계
 def summer_third1():
+    #센서값 가져오기
+
     # fan
     send_signal_to_ssfarm("C_F-1")
     # heat
@@ -107,6 +119,8 @@ def summer_third1():
 
 # 여름 3-2단계
 def summer_third2():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -128,6 +142,8 @@ def summer_third2():
 
 # 여름 4단계
 def summer_forth():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -149,6 +165,8 @@ def summer_forth():
 
 # 여름 5단계
 def summer_fifth():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -170,6 +188,8 @@ def summer_fifth():
 
 # 겨울 1단계
 def winter_first():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -191,6 +211,8 @@ def winter_first():
 
 # 겨울 2단계
 def winter_second():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-0")
     # heat
@@ -212,6 +234,8 @@ def winter_second():
 
 # 겨울 3-1단계
 def winter_third1():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-0")
     # heat
@@ -233,6 +257,8 @@ def winter_third1():
 
 # 겨울 3-2단계
 def winter_third2():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-0")
     # heat
@@ -254,6 +280,8 @@ def winter_third2():
 
 # 겨울 4단계
 def winter_forth():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-0")
     # heat
@@ -275,6 +303,8 @@ def winter_forth():
 
 # 겨울 5단계
 def winter_fifth():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-0")
     # heat
@@ -296,6 +326,8 @@ def winter_fifth():
 
 # 비 1단계
 def rain_first():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -317,6 +349,8 @@ def rain_first():
 
 # 비 2단계
 def rain_second():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -338,6 +372,8 @@ def rain_second():
 
 # 비 3-1단계
 def rain_third1():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -359,6 +395,8 @@ def rain_third1():
 
 # 비 3-2단계
 def rain_third2():
+    # 센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -380,6 +418,8 @@ def rain_third2():
 
 # 비 4단계
 def rain_forth():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
@@ -401,6 +441,8 @@ def rain_forth():
 
 # 비 5단계
 def rain_fifth():
+    #센서값 가져오기
+
     # fan
     send_signal_to_sfarm("C_F-1")
     # heat
