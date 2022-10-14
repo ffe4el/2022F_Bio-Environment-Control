@@ -306,7 +306,7 @@ def rain_first():
     # window
     send_signal_to_sfarm("C_S-0")
     # co2
-    send_signal_to_ssfarm("Y1")
+    send_signal_to_ssfarm("Y0")
     # o2
     send_signal_to_ssfarm("G0")
     # water
@@ -327,7 +327,7 @@ def rain_second():
     # window
     send_signal_to_sfarm("C_S-0")
     # co2
-    send_signal_to_ssfarm("Y1")
+    send_signal_to_ssfarm("Y0")
     # o2
     send_signal_to_ssfarm("G0")
     # water
@@ -348,7 +348,7 @@ def rain_third1():
     # window
     send_signal_to_sfarm("C_S-0")
     # co2
-    send_signal_to_ssfarm("Y1")
+    send_signal_to_ssfarm("Y0")
     # o2
     send_signal_to_ssfarm("G0")
     # water
@@ -390,7 +390,7 @@ def rain_forth():
     # window
     send_signal_to_sfarm("C_S-0")
     # co2
-    send_signal_to_ssfarm("Y1")
+    send_signal_to_ssfarm("Y0")
     # o2
     send_signal_to_ssfarm("G0")
     # water
@@ -411,7 +411,7 @@ def rain_fifth():
     # window
     send_signal_to_sfarm("C_S-0")
     # co2
-    send_signal_to_ssfarm("Y1")
+    send_signal_to_ssfarm("Y0")
     # o2
     send_signal_to_ssfarm("G0")
     # water
