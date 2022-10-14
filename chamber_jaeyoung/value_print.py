@@ -163,7 +163,7 @@ def summer_fifth():
     # o2
     send_signal_to_ssfarm("G1")
     # water
-    send_signal_to_ssfarm("W1")
+    send_signal_to_ssfarm("W0")
     # sound
     beepsound()
 
