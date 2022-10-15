@@ -14,11 +14,12 @@
 
 
 <script>
+var temp_msg = document.getElementById("temp_msg");
 setInterval(function()
 {
     $.ajax({
         type: "get",
-        url: "http://172.30.1.65:5000/temp_msg",
+        url: "http://#/temp_msg",
         success:function(data)
         {
             $("#temp_msg").html(data);
