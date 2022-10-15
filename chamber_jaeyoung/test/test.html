@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dash Board</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<p id="clock">Here will be date|time</p>
+
+<script>
+var clock = document.getElementById("clock");
+
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://172.30.1.65:5000/time_feed",
+        success:function(data)
+        {
+            $("#clock").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); 10000//10000 milliseconds = 10 seconds
+</script>
+
+
+</body>
+</html>
