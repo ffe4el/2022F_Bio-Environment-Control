@@ -1,32 +1,478 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Dash Board</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <style>
+    .flower{
+      width:150px;
+      height:150px;
+      -webkit-animation:flower 3s linear infinite;
+      display: block;
+      margin: auto;
+    }
+    @-webkit-keyframes flower{
+      0%{
+        -webkit-transform:rotate(0deg);
+      }
+      100%{
+        -webkit-transform:rotate(360deg);
+      }
+    }
+  </style>
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/fc4a7565b8.js" crossorigin="anonymous"></script>
+ </head>
 <body>
-<div>
-    <p>Current msg: </p>
-    <p id="current_msg"></p>
-</div>
 
-<iframe src="http://192.168.0.66:5000/" title="Teachable Cam Test" width="224" height="224" style="border:1px solid black;"></iframe>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="justify-content-between">
+      <a href="dash_board.html" class="logo align-items-center">
+        <span class="d-none d-lg-block">Mini - Chamber Smart flatform SDA LAB</span>
+      </a>
+    </div><!-- End Logo -->
+  </header><!-- End Header -->
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+    </div><!-- End Page Title -->
+    <section class="section dashboard">
+      <div class="row">
+        <!-- Left side columns -->
+        <div class="col-lg-6">
+          <div class="row">
+            <!-- cameara Card -->
+            <div class="col-xxl-5 col-md-6">
+              <div class="card info-card camera-card">
+                <div class="card-body">
+                  <h5 class="card-title">camera</h5>
+                    <div class="img-responsive" align="middle">
+                  <iframe src="http://192.168.0.72:81/stream" width="400px" height="300px"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div><!-- camera Card -->
+            <!-- data Card -->
+            <div class="col-xxl-7 col-md-6">
+              <div class="card info-card data-card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-xxl-6">
+                      <h5 class="card-title">data</h5>
+                      <img src="assets/img/seed.jpg" width="310xp" height="250xp" alt="seed" class="img-responsive-rounded" >
+                    </div>
+                    <div class="col-xxl-6">
+                      <p class="card-title">seed</p>
+                      <p class="card-title">temperature : 15°C</p>
+                      <p class="card-title">humid : 70%</p>
+                      <p class="card-title">lux : 500lx</p>
+                      <p class="card-title">co2 : 300ppm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- data category -->
+<!--            controller-->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">control</h5>
+                  <div class="row">
+                      <div class="col-lg-3" >
+                        <div class="flower" >
+                        <img src="assets/img/fan.png"  width="150px" height="150px" alt="">
+                        </div>
+                      <h5 class="card-title" align="center">fan on</h5>
+                        <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                        <!-- Rounded switch -->
+                    </div>
+                    <div class="col-lg-3" style="text-align: center">
+                        <img src="assets/img/windows_opened.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center">window open</h5>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: center">
+                      <img src="assets/img/lightbulb_on.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center">light on</h5>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: center">
+                      <img src="assets/img/heater_on.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center">heater on</h5>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-lg-3" style="text-align: center">
+                      <img src="assets/img/fog_on.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center">fog off</h5>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: center">
+                      <img src="assets/img/co2_off.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center">co2 off</h5>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: center">
+                      <img src="assets/img/o2_on.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center">o2 on</h5>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                    <div class="col-lg-3" style="text-align: center">
+                      <img src="assets/img/drops_on.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center">drop on</h5>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- controller -->
+          </div>
+        </div><!-- End Left side columns -->
+        <!-- Right side columns -->
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-3">
+                  <h5 class="card-title">temperature</h5>
+                  <img src="assets/img/thermometer.png" alt="temperture" height="150px" class="img-responsive-rounded">
+                  <div id="temperate"></div>
+                  <p>{{data}}</p>
+                </div>
+                <div class="col-lg-3">
+                  <h5 class="card-title">humid</h5>
+                  <img src="assets/img/humid.png" alt="humid" width="150xp" height="150px" class="img-responsive-rounded align-items-center">
+                </div>
+                <div class="col-lg-3">
+                  <h5 class="card-title">lux</h5>
+                  <img src="assets/img/sunny.png" alt="lux" width="150xp" height="150px" class="img-responsive-rounded align-items-center" >
+                </div>
+                <div class="col-lg-3">
+                  <h5 class="card-title">co2</h5>
+                  <img src="assets/img/co2.png" alt="co2" width="150xp" height="150px" class="img-responsive-rounded align-items-center" >
+                </div>
+              </div>
+            </div><!-- End activity item-->
+          </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class ="col-lg-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">temperature<span>/week</span></h5>
+                          <div id="Chart1"></div>
+                          <script>
+                              document.addEventListener("DOMContentLoaded", () => {
+                                new ApexCharts(document.querySelector("#Chart1"), {
+                                  series: [{
+                                    name: 'Customers',
+                                    data: [15, 11, 32, 18, 9, 24, 11]
+                                  }],
+                                  chart: {
+                                    height: 350,
+                                    type: 'area',
+                                    toolbar: {
+                                      show: false
+                                    },
+                                  },
+                                  markers: {
+                                    size: 4
+                                  },
+                                  colors: ['#c52b2b'],
+                                  fill: {
+                                    type: "gradient",
+                                    gradient: {
+                                      shadeIntensity: 1,
+                                      opacityFrom: 0.3,
+                                      opacityTo: 0.4,
+                                      stops: [0, 90, 100]
+                                    }
+                                  },
+                                  dataLabels: {
+                                    enabled: false
+                                  },
+                                  stroke: {
+                                    curve: 'smooth',
+                                    width: 2
+                                  },
+                                  xaxis: {
+                                    type: 'datetime',
+                                    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                                  },
+                                  tooltip: {
+                                    x: {
+                                      format: 'dd/MM/yy HH:mm'
+                                    },
+                                  }
+                                }).render();
+                              });
+                            </script>
+                          <!-- End Line Chart -->
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-lg-6">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">humid<span>/week</span></h5>
+                            <!-- Line Chart -->
+                            <div id="Chart2"></div>
+                            <script>
+                              document.addEventListener("DOMContentLoaded", () => {
+                                new ApexCharts(document.querySelector("#Chart2"), {
+                                  series: [{
+                                    name: 'Sales',
+                                    data: [31, 40, 28, 51, 42, 82, 56],
+                                  }],
+                                  chart: {
+                                    height: 350,
+                                    type: 'area',
+                                    toolbar: {
+                                      show: false
+                                    },
+                                  },
+                                  markers: {
+                                    size: 4
+                                  },
+                                  colors: ['#4154f1'],
+                                  fill: {
+                                    type: "gradient",
+                                    gradient: {
+                                      shadeIntensity: 1,
+                                      opacityFrom: 0.3,
+                                      opacityTo: 0.4,
+                                      stops: [0, 90, 100]
+                                    }
+                                  },
+                                  dataLabels: {
+                                    enabled: false
+                                  },
+                                  stroke: {
+                                    curve: 'smooth',
+                                    width: 2
+                                  },
+                                  xaxis: {
+                                    type: 'datetime',
+                                    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                                  },
+                                  tooltip: {
+                                    x: {
+                                      format: 'dd/MM/yy'
+                                    },
+                                  }
+                                }).render();
+                              });
+                            </script>
+                            <!-- End Graph -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- End Reports -->
+          <div class="col-12">
+            <div class="row">
+              <div class ="col-lg-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">lux<span>/week</span></h5>
+                    <div id="Chart3"></div>
+                    <script>
+                      document.addEventListener("DOMContentLoaded", () => {
+                        new ApexCharts(document.querySelector("#Chart3"), {
+                          series: [{
+                            name: 'Customers',
+                            data: [15, 11, 32, 18, 9, 24, 11]
+                          }],
+                          chart: {
+                            height: 350,
+                            type: 'area',
+                            toolbar: {
+                              show: false
+                            },
+                          },
+                          markers: {
+                            size: 4
+                          },
+                          colors: ['#ffe81d'],
+                          fill: {
+                            type: "gradient",
+                            gradient: {
+                              shadeIntensity: 1,
+                              opacityFrom: 0.3,
+                              opacityTo: 0.4,
+                              stops: [0, 90, 100]
+                            }
+                          },
+                          dataLabels: {
+                            enabled: false
+                          },
+                          stroke: {
+                            curve: 'smooth',
+                            width: 2
+                          },
+                          xaxis: {
+                            type: 'datetime',
+                            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                          },
+                          tooltip: {
+                            x: {
+                              format: 'dd/MM/yy HH:mm'
+                            },
+                          }
+                        }).render();
+                      });
+                    </script>
+                    <!-- End Line Chart -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">co2<span>/week</span></h5>
+                    <!-- Line Chart -->
+                    <div id="Chart4"></div>
+                    <script>
+                      document.addEventListener("DOMContentLoaded", () => {
+                        new ApexCharts(document.querySelector("#Chart4"), {
+                          series: [{
+                            name: 'Sales',
+                            data: [31, 40, 28, 51, 42, 82, 56],
+                          }],
+                          chart: {
+                            height: 350,
+                            type: 'area',
+                            toolbar: {
+                              show: false
+                            },
+                          },
+                          markers: {
+                            size: 4
+                          },
+                          colors: ['#42a10c'],
+                          fill: {
+                            type: "gradient",
+                            gradient: {
+                              shadeIntensity: 1,
+                              opacityFrom: 0.3,
+                              opacityTo: 0.4,
+                              stops: [0, 90, 100]
+                            }
+                          },
+                          dataLabels: {
+                            enabled: false
+                          },
+                          stroke: {
+                            curve: 'smooth',
+                            width: 2
+                          },
+                          xaxis: {
+                            type: 'datetime',
+                            categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                          },
+                          tooltip: {
+                            x: {
+                              format: 'dd/MM/yy HH:mm'
+                            },
+                          }
+                        }).render();
+                      });
+                    </script>
+                    <!-- End Graph -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Reports -->
+              </div><!-- End Right side columns -->
+            </div>
+          </section>
 
-<script>
-setInterval(function()
-{
-    $.ajax({
-        type: "get",
-        url: "http://192.168.0.66:5000/current_msg",
-        success:function(data)
-        {
-            $("#current_msg").html(data);
-            // console.log(data);
-        }
-    });
-}, 500); //10000 milliseconds = 10 seconds
-</script>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>

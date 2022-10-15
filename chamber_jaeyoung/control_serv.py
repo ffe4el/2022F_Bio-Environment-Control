@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
-from cam_python import camera
+# from cam_python import camera
 from flask_cors import cross_origin
 
 
@@ -63,17 +63,17 @@ def camera_local():
 
                 # Add Information on screen
                 if is_level == 0:
-                    msg_level = "발아단계"
+                    msg_level = "seed"
                 elif is_level == 1:
-                    msg_level = "적묘단계"
+                    msg_level = "sprout"
                 elif is_level == 2:
-                    msg_level = "생육단계"
+                    msg_level = "growth"
                 elif is_level == 3:
-                    msg_level = "개화단계"
+                    msg_level = "flower"
                 elif is_level == 4:
-                    msg_level = "수확단계"
+                    msg_level = "fruit"
                 else:
-                    msg_level = "인식할 수 없습니다."
+                    msg_level = "nothing"
 
                 # msg_card += " ({:.1f})%".format(is_card_prob[is_card] * 100)
 
@@ -102,7 +102,7 @@ def index():
 @app.route("/current_msg")
 @cross_origin(origin='*')
 def current_msg():
-    camera_local()
+    return msg_level
 
 
 
