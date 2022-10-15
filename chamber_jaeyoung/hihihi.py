@@ -126,20 +126,31 @@ def send_signal_to_sfarm(msg):
             break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
-        
-@app.route("/temp_value")
-@cross_origin(origin='*')
-def temp_value(msg):
-    return Response(send_signal_to_sfarm(msg), mimetype='text')
 
 @app.route("/temp_msg")
 @cross_origin(origin='*')
 def temp_msg(msg):
-    send_signal_to_sfarm(msg)
-    return temp
+    def send_signal_to_sfarm(msg):
+        while True:
+            global temp
+            z = s.readline()
+            # print(z)
+            # 내용이 비어있지 않으면 프린트
 
+            if not z.decode().startswith("#"):
+                z = z.decode()[:len(z) - 1]
+                print("내용출력:", end="")
+                print(z)
+                if z.startswith("{ \"temp"):
+                    data = json.loads(z)
+                    temp = int(data["temp"])
+                    yield f"{temp}"
+            else:
+                break
+        if (s.readable()):
+            s.write("{}\n".format(msg).encode())
 
-
+    return Response(send_signal_to_sfarm(msg), mimetype='text')
 
 
 def load_env():
