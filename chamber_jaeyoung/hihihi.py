@@ -64,17 +64,17 @@ def camera_local():
 
                 # Add Information on screen
                 if is_level == 0:
-                    msg_level = "발아단계"
+                    msg_level = "1"
                 elif is_level == 1:
-                    msg_level = "적묘단계"
+                    msg_level = "2"
                 elif is_level == 2:
-                    msg_level = "생육단계"
+                    msg_level = "3"
                 elif is_level == 3:
-                    msg_level = "개화단계"
+                    msg_level = "4"
                 elif is_level == 4:
-                    msg_level = "수확단계"
+                    msg_level = "5"
                 else:
-                    msg_level = "인식할 수 없습니다."
+                    msg_level = "No"
 
                 # msg_card += " ({:.1f})%".format(is_card_prob[is_card] * 100)
 
