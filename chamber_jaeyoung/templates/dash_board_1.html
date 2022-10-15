@@ -11,6 +11,12 @@
     <p id="current_msg"></p>
 </div>
 
+<div>
+    <p>Current msg: </p>
+    <p id="msg_value"></p>
+</div>
+
+
 <iframe src="http://192.168.0.66:5000/" title="Teachable Cam Test" width="224" height="224" style="border:1px solid black;"></iframe>
 
 <script>
@@ -27,6 +33,39 @@ setInterval(function()
     });
 }, 500); //10000 milliseconds = 10 seconds
 </script>
+
+<script>
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://192.168.0.66:5000/current_msg",
+        success:function(data)
+        {
+            $("#current_msg").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); //10000 milliseconds = 10 seconds
+</script>
+
+<script>
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://#/msg_value",
+        success:function(data)
+        {
+            $("#msg_value").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); //10000 milliseconds = 10 seconds
+</script>
+
+
+
 
 </body>
 </html>
