@@ -93,6 +93,7 @@ def camera_local():
 @cross_origin(origin='*')
 def current_msg():
     camera_local()
+    return msg_level
 
 @app.route('/')
 def index():
