@@ -121,7 +121,6 @@ def send_signal_to_sfarm(msg):
             if z.startswith("{ \"temp"):
                 data = json.loads(z)
                 temp = int(data["temp"])
-                yield f"{temp}"
         else:
             break
     if (s.readable()):
