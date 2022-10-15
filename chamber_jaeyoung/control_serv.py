@@ -26,7 +26,7 @@ from urllib.request import urlopen
 import tensorflow as tf
 
 def camera_local():
-    global msg_card
+    global msg_level
     url = "http://192.168.0.72:81/stream"  # ESP CAM의 영상 스트리밍 주소
     stream = urlopen(url)
     buffer = b''
