@@ -10,20 +10,23 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
-import cv2
-from urllib.request import urlopen
-import tensorflow as tf
+from cam_python import camera
 from flask_cors import cross_origin
 
-app = Flask(__name__)
-#10번 포트에 연결된 serial을 s로 지정(채널:9600)
-s = serial.Serial('COM3', 9600) #아두이노 메가
-ss = serial.Serial('COM6', 9600) #아두이노 우노
 
-msg_level = "Ready"
+app = Flask(__name__)
+#3번 포트에 연결된 serial을 s로 지정(채널:9600)(COM3)
+s = serial.Serial('COM3', 9600)
+
+msg_card = "Ready"
+
+import cv2
+import numpy as np
+from urllib.request import urlopen
+import tensorflow as tf
 
 def camera_local():
-    global msg_level
+    global msg_card
     url = "http://192.168.0.72:81/stream"  # ESP CAM의 영상 스트리밍 주소
     stream = urlopen(url)
     buffer = b''
@@ -72,8 +75,9 @@ def camera_local():
                 else:
                     msg_level = "인식할 수 없습니다."
 
+                # msg_card += " ({:.1f})%".format(is_card_prob[is_card] * 100)
 
-                # cv2.putText(frame, msg_level, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (225, 0, 0), thickness=2)
+                cv2.putText(frame, msg_level, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (225, 0, 0), thickness=2)
 
 
                 ret, jpeg = cv2.imencode('.jpg', cv2.resize(frame, input_size, frame))
@@ -89,16 +93,16 @@ def camera_local():
             break
 
 
+@app.route('/')
+@cross_origin(origin='*')
+def index():
+    return Response(camera_local(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
 @app.route("/current_msg")
 @cross_origin(origin='*')
 def current_msg():
     camera_local()
-    return msg_level
-
-@app.route('/')
-def index():
-    # load_env()
-    return "index page"
 
 
 
@@ -115,44 +119,44 @@ def send_signal_to_sfarm(msg):
             if z.startswith("{ \"temp"):
                 data = json.loads(z)
                 temp = int(data["temp"])
-                # print(temp)
         else:
             break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
 
-
-def send_signal_to_ssfarm(msg):
-    if (ss.readable()):
-        ss.write("{}\n".format(msg).encode())
-        time.sleep(0.2)
-
-
-
 def load_env():
     z = s.readline()
     z = z.decode()[:len(z) - 1]
     data = json.loads(z)
-    temp = int(data['temp'])
+    temp = int(data["temp"])
     humid = int(data['humidity'])
     cdc = int(data['cdc'])
     print(temp, humid, cdc)
     return temp, humid, cdc
 
-@app.route('/red-on')
-def red_on():
-    load_env()
-    send_signal_to_ssfarm("R1")
-    return index()
+# def random_sinegraph():
+#     matplotlib.use('TkAgg')
+#     plt.rcParams["figure.figsize"] = [7.50, 3.50]
+#     plt.rcParams["figure.autolayout"] = True
+#
+#     temp_threshold = 28
+#
+#     fig = plt.figure()
+#     ax = plt.axes(xlim=(0, 2), ylim=(18, 32))
+#     ax.set_ylabel("Indoor temperature (degrees C)")
+#     ax.set_xlabel("time line")
+#     line, = ax.plot([], [], lw=2)
+#
+#     plt.axhline(y=temp_threshold, ls="--")
+#     line_color = "b"
+#     stage = -1
 
-
-@app.route('/summer')
+@app.route('/fan-on')
 def fan_on():
-    load_env()
     send_signal_to_sfarm("C_F-1")
-    send_signal_to_sfarm("C_S-1")
-    send_signal_to_ssfarm("R1")
+    load_env()
     return "Order Fan On"
+
 
 
 @app.route('/fan-off')
@@ -186,4 +190,4 @@ def window_close():
     return "Order window close"
 
 
-app.run(host="0.0.0.0", debug=False)
+app.run(host="0.0.0.0", threaded=True)
