@@ -10,7 +10,6 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
-from cam_python import camera
 from flask_cors import cross_origin
 
 
@@ -147,7 +146,7 @@ def temp_msg():
         yield f"{temp}"
     return Response(send_signal_to_sfarm(), mimetype='text')
 
-@app.route("/hmid_msg")
+@app.route("/humid_msg")
 @cross_origin(origin='*')
 def humid_msg():
     def send_signal_to_sfarm():
