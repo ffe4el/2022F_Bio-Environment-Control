@@ -192,7 +192,7 @@
             $.ajax({
                 type: "get",
                 url: "http://192.168.0.66:5000/temp_msg",
-                datatype: "json",
+                // datatype: "json",
                 success:function(data)
                 {
                     $("#temp_msg").html(data);
@@ -206,7 +206,7 @@
             $.ajax({
                 type: "get",
                 url: "http://192.168.0.66:5000/humid_msg",
-                datatype: "json",
+                // datatype: "json",
                 success:function(data)
                 {
                     $("#humid_msg").html(data);
@@ -221,7 +221,7 @@
             $.ajax({
                 type: "get",
                 url: "http://192.168.0.66:5000/cdc_msg",
-                datatype: "json",
+                // datatype: "json",
                 success:function(data)
                 {
                     $("#cdc_msg").html(data);
@@ -239,17 +239,17 @@
                 <div class="col-lg-3">
                   <h5 class="card-title">temperature</h5>
                   <img src="assets/img/thermometer.png" alt="temperture" height="150px" class="img-responsive-rounded">
-                  <div class="card-title" id="temp_msg">°C</div>
+                  <div class="card-title" id="temp_msg"></div>
                 </div>
                 <div class="col-lg-3">
                   <h5 class="card-title">humid</h5>
                   <img src="assets/img/humid.png" alt="humid" width="150xp" height="150px" class="img-responsive-rounded align-items-center">
-                  <div class="card-title" id="humid_msg">%</div>
+                  <div class="card-title" id="humid_msg"></div>
                 </div>
                 <div class="col-lg-3">
                   <h5 class="card-title">lux</h5>
                   <img src="assets/img/sunny.png" alt="lux" width="150xp" height="150px" class="img-responsive-rounded align-items-center" >
-                  <h5 class="card-title" id="cdc_msg">lx</h5>
+                  <div class="card-title" id="cdc_msg"></div>
                 </div>
                 <div class="col-lg-3">
                   <h5 class="card-title">co2</h5>

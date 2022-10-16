@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
-from cam_python import camera
+# from cam_python import camera
 from flask_cors import cross_origin
 
 
@@ -110,20 +110,20 @@ def current_msg():
 
 
 def send_signal_to_sfarm(msg):
-    while True:
-        z = s.readline()
-        # print(z)
-        # 내용이 비어있지 않으면 프린트
-
-        if not z.decode().startswith("#"):
-            z = z.decode()[:len(z) - 1]
-            print("내용출력:", end="")
-            print(z)
-            if z.startswith("{ \"temp"):
-                data = json.loads(z)
-                temp = int(data["temp"])
-        else:
-            break
+    # while True:
+    #     z = s.readline()
+    #     # print(z)
+    #     # 내용이 비어있지 않으면 프린트
+    #
+    #     # if not z.decode().startswith("#"):
+    #     #     z = z.decode()[:len(z) - 1]
+    #     #     print("내용출력:", end="")
+    #     #     print(z)
+    #     #     if z.startswith("{ \"temp"):
+    #     #         data = json.loads(z)
+    #     # #         # temp = int(data["temp"])
+    #     else:
+    #         break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
 
@@ -141,13 +141,15 @@ def load_temp_msg(msg):
                 temp = int(data["temp"])
         else:
             break
-    if (s.readable()):
-        s.write("{}\n".format(msg).encode())
+    # if (s.readable()):
+    #     s.write("{}\n".format(msg).encode())
+    print(temp)
     yield f"{temp}"
 
 def load_humid_msg(msg):
-    global humid
+    # global humid
     while True:
+        global humid
         z = s.readline()
         # print(z)
         # 내용이 비어있지 않으면 프린트
@@ -159,14 +161,15 @@ def load_humid_msg(msg):
                 humid = int(data["humidity"])
         else:
             break
-    if (s.readable()):
-        s.write("{}\n".format(msg).encode())
-
+    # if (s.readable()):
+    #     s.write("{}\n".format(msg).encode())
+    print(humid)
     yield f"{humid}"
 
 def load_cdc_msg(msg):
-    global cdc
+    # global cdc
     while True:
+        global cdc
         z = s.readline()
         # print(z)
         # 내용이 비어있지 않으면 프린트
@@ -178,9 +181,9 @@ def load_cdc_msg(msg):
                 cdc = int(data["cdc"])
         else:
             break
-    if (s.readable()):
-        s.write("{}\n".format(msg).encode())
-
+    # if (s.readable()):
+    #     s.write("{}\n".format(msg).encode())
+    print(cdc)
     yield f"{cdc}"
 
 @app.route("/temp_msg")
@@ -201,15 +204,15 @@ def cdc_msg():
     load_cdc_msg("C_F-0")
     return Response(load_cdc_msg("C_F-0"), mimetype='text')
 
-def load_env():
-    z = s.readline()
-    z = z.decode()[:len(z) - 1]
-    data = json.loads(z)
-    temp = int(data["temp"])
-    humid = int(data['humidity'])
-    cdc = int(data['cdc'])
-    print(temp, humid, cdc)
-    return temp, humid, cdc
+# def load_env():
+    # z = s.readline()
+    # z = z.decode()[:len(z) - 1]
+    # data = json.loads(z)
+    # temp = int(data["temp"])
+    # humid = int(data['humidity'])
+    # cdc = int(data['cdc'])
+    # print(temp, humid, cdc)
+    # return temp, humid, cdc
 
 # def random_sinegraph():
 #     matplotlib.use('TkAgg')
@@ -231,7 +234,7 @@ def load_env():
 @app.route('/fan-on')
 def fan_on():
     send_signal_to_sfarm("C_F-1")
-    load_env()
+    # load_env()
     return "Order Fan On"
 
 
