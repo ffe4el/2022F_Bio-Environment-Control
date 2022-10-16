@@ -10,7 +10,6 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
-from cam_python import camera
 from flask_cors import cross_origin
 
 
@@ -126,67 +125,84 @@ def send_signal_to_sfarm(msg):
             break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
+        
+def load_temp_msg(msg):
+    while True:
+        global temp
+        z = s.readline()
+        # print(z)
+        # 내용이 비어있지 않으면 프린트
+
+        if not z.decode().startswith("#"):
+            z = z.decode()[:len(z) - 1]
+            if z.startswith("{ \"temp"):
+                data = json.loads(z)
+                temp = int(data["temp"])
+        else:
+            break
+    if (s.readable()):
+        s.write("{}\n".format(msg).encode())
+    yield f"{temp}"
+    
+def load_humid_msg(msg):
+    global humid
+    while True:
+        z = s.readline()
+        # print(z)
+        # 내용이 비어있지 않으면 프린트
+
+        if not z.decode().startswith("#"):
+            z = z.decode()[:len(z) - 1]
+            print("내용출력:", end="")
+            print(z)
+            if z.startswith("{ \"temp"):
+                data = json.loads(z)
+                humid = int(data["humidity"])
+        else:
+            break
+    if (s.readable()):
+        s.write("{}\n".format(msg).encode())
+        
+    yield f"{humid}"
+        
+def load_cdc_msg(msg):
+    global cdc
+    while True:
+        z = s.readline()
+        # print(z)
+        # 내용이 비어있지 않으면 프린트
+
+        if not z.decode().startswith("#"):
+            z = z.decode()[:len(z) - 1]
+            print("내용출력:", end="")
+            print(z)
+            if z.startswith("{ \"temp"):
+                data = json.loads(z)
+                cdc = int(data["cdc"])
+        else:
+            break
+    if (s.readable()):
+        s.write("{}\n".format(msg).encode())
+        
+    yield f"{cdc}"
 
 @app.route("/temp_msg")
 @cross_origin(origin='*')
 def temp_msg():
-    def send_signal_to_sfarm():
-        global temp
-        while True:
-            z = s.readline()
-            # print(z)
-            # 내용이 비어있지 않으면 프린트
-
-            if not z.decode().startswith("#"):
-                z = z.decode()[:len(z) - 1]
-                if z.startswith("{ \"temp"):
-                    data = json.loads(z)
-                    temp = int(data["temp"])
-            else:
-                break
-        yield f"{temp}"
-    return Response(send_signal_to_sfarm(), mimetype='text')
+    load_temp_msg("C_F-0")
+    return Response(load_temp_msg("C_F-0"), mimetype='text')
 
 @app.route("/hmid_msg")
 @cross_origin(origin='*')
 def humid_msg():
-    def send_signal_to_sfarm():
-        global humid
-        while True:
-            z = s.readline()
-            # print(z)
-            # 내용이 비어있지 않으면 프린트
-
-            if not z.decode().startswith("#"):
-                z = z.decode()[:len(z) - 1]
-
-                if z.startswith("{ \"temp"):
-                    data = json.loads(z)
-                    humid = int(data["humidity"])
-            else:
-                break
-        yield f"{humid}"
-    return Response(send_signal_to_sfarm(), mimetype='text')
+    load_humid_msg("C_F-0")
+    return Response(load_humid_msg("C_F-0"), mimetype='text')
 
 @app.route("/cdc_msg")
 @cross_origin(origin='*')
 def cdc_msg():
-    def send_signal_to_sfarm():
-        global cdc
-        while True:
-            z = s.readline()
-            # print(z)
-            # 내용이 비어있지 않으면 프린트
-
-            if not z.decode().startswith("#"):
-                z = z.decode()[:len(z) - 1]
-                if z.startswith("{ \"temp"):
-                    data = json.loads(z)
-                    cdc = int(data["cdc"])
-            else:
-                break
-        yield f"{cdc}"
-    return Response(send_signal_to_sfarm(), mimetype='text')
+    load_cdc_msg("C_F-0")
+    return Response(load_cdc_msg("C_F-0"), mimetype='text')
 
 def load_env():
     z = s.readline()
