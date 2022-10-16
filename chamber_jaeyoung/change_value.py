@@ -10,7 +10,6 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
-from cam_python import camera
 from flask_cors import cross_origin
 
 
@@ -116,8 +115,8 @@ def send_signal_to_sfarm(msg):
 
         if not z.decode().startswith("#"):
             z = z.decode()[:len(z) - 1]
-            print("내용출력:", end="")
-            print(z)
+#             print("내용출력:", end="")
+#             print(z)
             if z.startswith("{ \"temp"):
                 data = json.loads(z)
                 temp = int(data["cdc"])
