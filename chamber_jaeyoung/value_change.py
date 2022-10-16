@@ -10,6 +10,7 @@ from matplotlib import pyplot as plt
 from matplotlib import animation
 import matplotlib
 from flask import Flask, Response
+from cam_python import camera
 from flask_cors import cross_origin
 
 
@@ -125,10 +126,10 @@ def send_signal_to_sfarm(msg):
             break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
-        
+
 def load_temp_msg(msg):
-    global temp
     while True:
+        global temp
         z = s.readline()
         # print(z)
         # 내용이 비어있지 않으면 프린트
@@ -143,7 +144,7 @@ def load_temp_msg(msg):
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
     yield f"{temp}"
-    
+
 def load_humid_msg(msg):
     global humid
     while True:
@@ -153,8 +154,6 @@ def load_humid_msg(msg):
 
         if not z.decode().startswith("#"):
             z = z.decode()[:len(z) - 1]
-            print("내용출력:", end="")
-            print(z)
             if z.startswith("{ \"temp"):
                 data = json.loads(z)
                 humid = int(data["humidity"])
@@ -162,9 +161,9 @@ def load_humid_msg(msg):
             break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
-        
+
     yield f"{humid}"
-        
+
 def load_cdc_msg(msg):
     global cdc
     while True:
@@ -174,8 +173,6 @@ def load_cdc_msg(msg):
 
         if not z.decode().startswith("#"):
             z = z.decode()[:len(z) - 1]
-            print("내용출력:", end="")
-            print(z)
             if z.startswith("{ \"temp"):
                 data = json.loads(z)
                 cdc = int(data["cdc"])
@@ -183,7 +180,7 @@ def load_cdc_msg(msg):
             break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
-        
+
     yield f"{cdc}"
 
 @app.route("/temp_msg")
@@ -192,7 +189,7 @@ def temp_msg():
     load_temp_msg("C_F-0")
     return Response(load_temp_msg("C_F-0"), mimetype='text')
 
-@app.route("/hmid_msg")
+@app.route("/humid_msg")
 @cross_origin(origin='*')
 def humid_msg():
     load_humid_msg("C_F-0")
