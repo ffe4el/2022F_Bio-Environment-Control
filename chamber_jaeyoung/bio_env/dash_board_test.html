@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dash Board Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div>
+    <p>Classification msg: </p>
+    <p id="classification_msg"></p>
+</div>
+
+<div>
+    <p>Temperature msg: </p>
+    <p id="temp_msg"></p>
+</div>
+
+<div>
+    <p>Humidity msg: </p>
+    <p id="humid_msg"></p>
+</div>
+
+<div>
+    <p>CDC msg: </p>
+    <p id="temp_msg"></p>
+</div>
+
+<!-- 분류값 + 카메라 화면-->
+<iframe src="http://192.168.0.66:5000/" title="Teachable Cam Test" width="224" height="224" style="border:1px solid black;"></iframe>
+
+<script>
+<!-- classification msg-->
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://192.168.0.66:5000/classification_msg",
+        success:function(data)
+        {
+            $("#classification_msg").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); //10000 milliseconds = 10 seconds
+</script>
+
+<script>
+<!-- temperature msg-->
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://#/temp_msg",
+        success:function(data)
+        {
+            $("#temp_msg").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); //10000 milliseconds = 10 seconds
+</script>
+
+<script>
+<!--  humidity msg -->
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://#/humid_msg",
+        success:function(data)
+        {
+            $("#humid_msg").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); //10000 milliseconds = 10 seconds
+</script>
+
+<script>
+<!--  cdc msg -->
+setInterval(function()
+{
+    $.ajax({
+        type: "get",
+        url: "http://#/cdc_msg",
+        success:function(data)
+        {
+            $("#cdc_msg").html(data);
+            // console.log(data);
+        }
+    });
+}, 500); //10000 milliseconds = 10 seconds
+</script>
+
+</body>
+</html>
