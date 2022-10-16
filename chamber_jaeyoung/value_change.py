@@ -127,8 +127,8 @@ def send_signal_to_sfarm(msg):
         s.write("{}\n".format(msg).encode())
         
 def load_temp_msg(msg):
+    global temp
     while True:
-        global temp
         z = s.readline()
         # print(z)
         # 내용이 비어있지 않으면 프린트
