@@ -17,6 +17,7 @@ ss = serial.Serial('COM6', 9600)  # 아두이노 우노
 app = Flask(__name__)
 msg_growth = "Ready"
 
+a = []
 # 아두이노 메가로 신호 송신
 def send_signal_to_sfarm(msg):
     while True:
@@ -33,6 +34,7 @@ def send_signal_to_sfarm(msg):
                 temp = int(data["temp"])
                 humid = int(data["humidity"])
                 cdc = int(data['cdc'])
+                a.append(temp)
                 print(temp)
         else:
             break
@@ -81,6 +83,7 @@ def summer_first():
     send_signal_to_ssfarm("W1")
     # sound
     beepsound()
+
 
 
 # 여름 2단계
@@ -524,6 +527,11 @@ def rain_fifth():
     # sound
     beepsound()
 
+@app.route("/msg_growth")
+@cross_origin(origin='*')
+def msg_growth():
+    main()
+    return msg_growth
 
 def main():
     global msg_growth
@@ -565,12 +573,10 @@ def main():
         if keyboard.is_pressed("q"):
             break
 
-@app.route("/msg_growth")
-@cross_origin(origin='*')
-def msg_growth():
-    main()
-    return msg_growth
+
+
+app.run(host="0.0.0.0", threaded=True)
 
 if __name__ == '__main__':
     main()
-    app.run(host="0.0.0.0", threaded=True)
+

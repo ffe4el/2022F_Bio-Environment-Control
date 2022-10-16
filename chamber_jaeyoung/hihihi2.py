@@ -119,14 +119,11 @@ def send_signal_to_sfarm(msg):
             z = z.decode()[:len(z) - 1]
             # print("내용출력:", end="")
             if z.startswith("{ \"temp"):
-                list = []
                 data = json.loads(z)
-                for value in data.values():
-                    temp = value
-                    list.append(temp)
+                temp = int(data["temp"])
         else:
             break
-        yield ''.join(list)
+    yield f"{temp}"
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
 

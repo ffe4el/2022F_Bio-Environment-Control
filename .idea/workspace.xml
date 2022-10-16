@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa41eb9-77a4-4225-9fe6-04083d525236" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/chamber_jaeyoung/hihihi2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -16,6 +17,8 @@
       <change beforePath="$PROJECT_DIR$/chamber_hyejin/cam_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/cam_python.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_hyejin/templates/cam_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/templates/cam_test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/control_serv_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/control_serv_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/hi_dash.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/hi_dash.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/hihihi.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/hihihi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/labels.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/js/main.js" afterDir="false" />
@@ -24,6 +27,8 @@
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/vendor/php-email-form/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/vendor/php-email-form/validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/templates/dash_board.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/templates/dash_board.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/templates/dash_board_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/templates/dash_board_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/test/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/value_print.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/value_print.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/control_serv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_serv1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +39,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -66,16 +72,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/sol/2022F_Bio-Environment-Control/chamber_jaeyoung/templates",
+    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/2022F_Bio-Environment-Control",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung\bio_env" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung\templates" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_hyejin" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control\chamber_jaeyoung" />
@@ -86,27 +93,8 @@
       <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.control_serv (1)">
-    <configuration name="cam_python" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="2022F_Bio-Environment-Control" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cam_python.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+  <component name="RunManager" selected="Python.hihihi2">
+    <configuration name="dash_board.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/2022F_Bio-Environment-Control/chamber_jaeyoung/templates/dash_board.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="control_serv (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -131,29 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="control_serv1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="2022F_Bio-Environment-Control" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control\control_serv1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="control_serv_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hihihi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2022F_Bio-Environment-Control" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -166,7 +132,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chamber_jaeyoung/control_serv_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chamber_jaeyoung/hihihi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,7 +141,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="value_print" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="hihihi2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2022F_Bio-Environment-Control" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,7 +154,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chamber_jaeyoung/value_print.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chamber_jaeyoung/hihihi2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="2022F_Bio-Environment-Control" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chamber_jaeyoung/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chamber_jaeyoung/test/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hihihi2" />
+        <item itemvalue="Python.hihihi" />
+        <item itemvalue="JavaScript 디버그.dash_board.html" />
         <item itemvalue="Python.control_serv (1)" />
-        <item itemvalue="Python.control_serv_2" />
-        <item itemvalue="Python.value_print" />
-        <item itemvalue="Python.control_serv1" />
-        <item itemvalue="Python.cam_python" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +207,10 @@
       <workItem from="1664956270269" duration="23483000" />
       <workItem from="1665567960838" duration="798000" />
       <workItem from="1665762944516" duration="3416000" />
-      <workItem from="1665813632067" duration="6693000" />
+      <workItem from="1665813632067" duration="11026000" />
+      <workItem from="1665842893843" duration="935000" />
+      <workItem from="1665845343534" duration="1738000" />
+      <workItem from="1665854011952" duration="23946000" />
     </task>
     <servers />
   </component>
@@ -239,11 +230,14 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv_2.coverage" NAME="control_serv_2 커버리지 결과" MODIFIED="1665817258453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
-    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv__1_.coverage" NAME="control_serv (1) 커버리지 결과" MODIFIED="1665820167504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv__1_.coverage" NAME="control_serv (1) 커버리지 결과" MODIFIED="1665914783286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$esp32_pycharm.coverage" NAME="esp32_pycharm 커버리지 결과" MODIFIED="1664960402702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$esp32_pycharm__1_.coverage" NAME="esp32_pycharm (1) 커버리지 결과" MODIFIED="1664956829797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_card" />
-    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$value_print.coverage" NAME="value_print 커버리지 결과" MODIFIED="1665758978272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$test.coverage" NAME="test 커버리지 결과" MODIFIED="1665912528618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung/test" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$hihihi2.coverage" NAME="hihihi2 커버리지 결과" MODIFIED="1665931758976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$value_print.coverage" NAME="value_print 커버리지 결과" MODIFIED="1665845414582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$cam_python.coverage" NAME="cam_python 커버리지 결과" MODIFIED="1665051520716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv.coverage" NAME="control_serv 커버리지 결과" MODIFIED="1665115865243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv.coverage" NAME="control_serv 커버리지 결과" MODIFIED="1665912264745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung/bio_env" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$hihihi.coverage" NAME="hihihi 커버리지 결과" MODIFIED="1665930178027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
   </component>
 </project>

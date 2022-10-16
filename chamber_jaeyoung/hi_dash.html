@@ -18,14 +18,14 @@ setInterval(function()
 {
     $.ajax({
         type: "get",
-        url: "http://172.30.1.65:5000/temp_msg",
+        url: "http://192.168.0.66:5000/temp_msg",
         success:function(data)
         {
             $("#temp_msg").html(data);
             // console.log(data);
         }
     });
-}, 10000); //10000 milliseconds = 10 seconds
+}, 500); //10000 milliseconds = 10 seconds
 
 </script>
 
