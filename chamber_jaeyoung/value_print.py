@@ -63,7 +63,7 @@ def beepsound():
 def summer_first():
     # 단계 출력
     global msg_growth
-    msg_growth = "여름 1단계"
+    msg_growth = "여름 발아 단계"
 
     # fan
     send_signal_to_sfarm("C_F-0")
@@ -90,7 +90,7 @@ def summer_first():
 def summer_second():
     # 단계 출력
     global msg_growth
-    msg_growth = "여름 2단계"
+    msg_growth = "여름 육묘 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -116,7 +116,7 @@ def summer_second():
 def summer_third1():
     # 단계 출력
     global msg_growth
-    msg_growth = "여름 3-1단계"
+    msg_growth = "여름 생육 낮 단계"
 
     # fan
     send_signal_to_ssfarm("C_F-1")
@@ -142,7 +142,7 @@ def summer_third1():
 def summer_third2():
     # 단계 출력
     global msg_growth
-    msg_growth = "여름 3-2단계"
+    msg_growth = "여름 생육 밤 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -168,7 +168,7 @@ def summer_third2():
 def summer_forth():
     # 단계 출력
     global msg_growth
-    msg_growth = "여름 4단계"
+    msg_growth = "여름 개화 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -194,7 +194,7 @@ def summer_forth():
 def summer_fifth():
     # 단계 출력
     global msg_growth
-    msg_growth = "여름 5단계"
+    msg_growth = "여름 수확 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -220,7 +220,7 @@ def summer_fifth():
 def winter_first():
     # 단계 출력
     global msg_growth
-    msg_growth = "겨울 1단계"
+    msg_growth = "겨울 발아 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -246,7 +246,7 @@ def winter_first():
 def winter_second():
     # 단계 출력
     global msg_growth
-    msg_growth = "겨울 2단계"
+    msg_growth = "겨울 육묘 단계"
 
     # fan
     send_signal_to_sfarm("C_F-0")
@@ -272,7 +272,7 @@ def winter_second():
 def winter_third1():
     # 단계 출력
     global msg_growth
-    msg_growth = "겨울 3-1단계"
+    msg_growth = "겨울 생육 낮 단계"
 
     # fan
     send_signal_to_sfarm("C_F-0")
@@ -298,7 +298,7 @@ def winter_third1():
 def winter_third2():
     # 단계 출력
     global msg_growth
-    msg_growth = "겨울 3-2단계"
+    msg_growth = "겨울 생육 밤 단계"
 
     # fan
     send_signal_to_sfarm("C_F-0")
@@ -324,7 +324,7 @@ def winter_third2():
 def winter_forth():
     # 단계 출력
     global msg_growth
-    msg_growth = "겨울 4단계"
+    msg_growth = "겨울 개화 단계"
 
     # fan
     send_signal_to_sfarm("C_F-0")
@@ -350,7 +350,7 @@ def winter_forth():
 def winter_fifth():
     # 단계 출력
     global msg_growth
-    msg_growth = "겨울 5단계"
+    msg_growth = "겨울 수확 단계"
 
     # fan
     send_signal_to_sfarm("C_F-0")
@@ -376,7 +376,7 @@ def winter_fifth():
 def rain_first():
     # 단계 출력
     global msg_growth
-    msg_growth = "비 1단계"
+    msg_growth = "비 발아 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -402,7 +402,7 @@ def rain_first():
 def rain_second():
     # 단계 출력
     global msg_growth
-    msg_growth = "비 2단계"
+    msg_growth = "비 육묘 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -428,7 +428,7 @@ def rain_second():
 def rain_third1():
     # 단계 출력
     global msg_growth
-    msg_growth = "비 3-1단계"
+    msg_growth = "비 생육 낮 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -454,7 +454,7 @@ def rain_third1():
 def rain_third2():
     # 단계 출력
     global msg_growth
-    msg_growth = "비 3-2단계"
+    msg_growth = "비 생육 밤 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -480,7 +480,7 @@ def rain_third2():
 def rain_forth():
     # 단계 출력
     global msg_growth
-    msg_growth = "비 4단계"
+    msg_growth = "비 개화 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")
@@ -506,7 +506,7 @@ def rain_forth():
 def rain_fifth():
     # 단계 출력
     global msg_growth
-    msg_growth = "비 5단계"
+    msg_growth = "비 수확 단계"
 
     # fan
     send_signal_to_sfarm("C_F-1")

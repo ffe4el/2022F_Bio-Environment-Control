@@ -110,7 +110,7 @@ def camera():
 @cross_origin(origin='*')
 def current_msg():
     global msg_level
-    camera_local()
+    # camera_local()
     return msg_level
 
 # 아두이노 메가에 신호보내기
@@ -137,7 +137,7 @@ def load_env_msg():
             z = z.decode()[:len(z) - 1]
         # if not z.startswith(b"#"):
         #     z = z[:len(z) - 1]
-            if z.startswith(""):
+            if z.startswith("{"):
                 data = json.loads(z)
                 # temp = int(data["temp"])
                 print("내용출력:", end="")
@@ -145,144 +145,14 @@ def load_env_msg():
                 return z
     return data
 #
-# # def load_humid_msg():
-# #     global humid
-# #     while True:
-# #         z = s.readline()
-# #         # print(z)
-# #         # 내용이 비어있지 않으면 프린트
-# #
-# #         if not z.decode().startswith("#"):
-# #             z = z.decode()[:len(z) - 1]
-# #             if z.startswith("{ \"temp"):
-# #                 data = json.loads(z)
-# #                 humid = int(data["temp"])
-# #                 print("내용출력:", end="")
-# #                 print(z)
-# #         else:
-# #             break
-# #     yield f"{humid}"
-# #     print(humid)
-#
-# # def load_cdc_msg():
-# #     global cdc
-# #     while True:
-# #         z = s.readline()
-# #         # print(z)
-# #         # 내용이 비어있지 않으면 프린트
-# #
-# #         if not z.decode().startswith("#"):
-# #             z = z.decode()[:len(z) - 1]
-# #             if z.startswith("{ \"temp"):
-# #                 data = json.loads(z)
-# #                 temp = int(data["cdc"])
-# #                 print("내용출력:", end="")
-# #                 print(z)
-# #         else:
-# #             break
-# #     yield f"{cdc}"
-# #     print(cdc)
+
 #
 @app.route("/env_msg")
 @cross_origin(origin='*')
 def env_msg():
     return Response(load_env_msg(), mimetype='application/json')
 
-# @app.route("/humid_msg")
-# @cross_origin(origin='*')
-# def humid_msg():
-#     return Response(load_humid_msg(), mimetype='text')
-#
-#
-# @app.route("/cdc_msg")
-# @cross_origin(origin='*')
-# def cdc_msg():
-#     # load_cdc_msg()
-#     return Response(load_cdc_msg(), mimetype='text')
 
-
-# 선풍기
-
-@app.route('/fan-on')
-def fan_on():
-    send_signal_to_sfarm("C_F-1")
-    print("fan on")
-    return "Order Fan On"
-@app.route('/fan-off')
-def fan_off():
-    send_signal_to_sfarm("C_F-0")
-    print("fan off")
-    return "Order Fan Off"
-
-# led 조명
-@app.route('/light-on/<level>')
-def light_on(level):
-    send_signal_to_sfarm("C_L-{}".format(level))
-    return f"Order Light {level}"
-@app.route('/light-off')
-def light_off():
-    send_signal_to_sfarm("C_L-0")
-    return "Order Light 0"
-
-# 창문
-@app.route('/window-open')
-def window_open():
-    send_signal_to_sfarm("C_S-1")
-    return "Order window open"
-@app.route('/window-close')
-def window_close():
-    send_signal_to_sfarm("C_S-0")
-    return "Order window close"
-
-# 발열등
-@app.route('/red-on')
-def red_on():
-    send_signal_to_ssfarm("R1")
-    return "Order red on"
-@app.route('/red-off')
-def red_off():
-    send_signal_to_ssfarm("R0")
-    return "Order red off"
-
-# 안개분무기
-@app.route('/blue-on')
-def blue_on():
-    send_signal_to_ssfarm("B1")
-    return "Order blue on"
-@app.route('/blue-off')
-def blue_off():
-    send_signal_to_ssfarm("B0")
-    return "Order blue off"
-
-# 수분공급기
-@app.route('/white-on')
-def white_on():
-    send_signal_to_ssfarm("W1")
-    return "Order red on"
-@app.route('/white-off')
-def white_off():
-    send_signal_to_ssfarm("W0")
-    return "Order white off"
-
-# Co2 발생기
-@app.route('/yellow-on')
-def yellow_on():
-    send_signal_to_ssfarm("Y1")
-    return "Order yellow on"
-@app.route('/yellow-off')
-def yellow_off():
-    send_signal_to_ssfarm("Y0")
-    return "Order yellow off"
-
-# O2 발생기
-@app.route('/green-on')
-def green_on():
-    send_signal_to_ssfarm("G1")
-    return "Order green on"
-@app.route('/green-off')
-def green_off():
-    send_signal_to_ssfarm("G0")
-    return "Order green off"
 
 
 
