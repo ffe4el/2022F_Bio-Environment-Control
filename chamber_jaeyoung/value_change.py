@@ -110,7 +110,7 @@ def camera():
 @cross_origin(origin='*')
 def current_msg():
     global msg_level
-    camera_local()
+    # camera_local()
     return msg_level
 
 # 아두이노 메가에 신호보내기
