@@ -16,12 +16,12 @@ from flask_cors import cross_origin
 
 app = Flask(__name__)
 #3번 포트에 연결된 serial을 s로 지정(채널:9600)(COM3)
+# 아두이노 메가
 s = serial.Serial('COM3', 9600)
+# 아두이노 우노
+ss = serial.Serial('COM6', 9600)  # 아두이노 우노
 
-msg_level = "Ready"
-temp = "Ready"
-humid = "Ready"
-cdc = "Ready"
+msg_level = "Ready..."
 
 import cv2
 import numpy as np
@@ -66,21 +66,23 @@ def camera_local():
 
                 # Add Information on screen
                 if is_level == 0:
-                    msg_level = "1"
+                    msg_level = "NO"
                 elif is_level == 1:
-                    msg_level = "2"
+                    msg_level = "seed"
                 elif is_level == 2:
-                    msg_level = "3"
+                    msg_level = "sprout"
                 elif is_level == 3:
-                    msg_level = "4"
+                    msg_level = "growth"
                 elif is_level == 4:
-                    msg_level = "5"
-                else:
-                    msg_level = "No"
+                    msg_level = "flower"
+                elif is_level == 5:
+                    msg_level = "fruit"
+                # else:
+                #     msg_level = "No"
 
                 # msg_card += " ({:.1f})%".format(is_card_prob[is_card] * 100)
 
-                cv2.putText(frame, msg_level, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (225, 0, 0), thickness=2)
+                # cv2.putText(frame, msg_level, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (225, 0, 0), thickness=2)
 
 
                 ret, jpeg = cv2.imencode('.jpg', cv2.resize(frame, input_size, frame))
@@ -96,178 +98,192 @@ def camera_local():
             break
 
 
-@app.route('/')
+
+
+@app.route('/camera')
 @cross_origin(origin='*')
-def index():
+def camera():
     return Response(camera_local(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 
 @app.route("/current_msg")
 @cross_origin(origin='*')
 def current_msg():
+    global msg_level
     camera_local()
+    return msg_level
 
-
-
+# 아두이노 메가에 신호보내기
 def send_signal_to_sfarm(msg):
-    # while True:
-    #     z = s.readline()
-    #     # print(z)
-    #     # 내용이 비어있지 않으면 프린트
-    #
-    #     # if not z.decode().startswith("#"):
-    #     #     z = z.decode()[:len(z) - 1]
-    #     #     print("내용출력:", end="")
-    #     #     print(z)
-    #     #     if z.startswith("{ \"temp"):
-    #     #         data = json.loads(z)
-    #     # #         # temp = int(data["temp"])
-    #     else:
-    #         break
     if (s.readable()):
         s.write("{}\n".format(msg).encode())
+    else:
+        print("message is not transferred")
 
-def load_temp_msg(msg):
+# 아두이노 우노에 신호보내기
+def send_signal_to_ssfarm(msg):
+    if (ss.readable()):
+        ss.write("{}\n".format(msg).encode())
+    else:
+        print("message is not transferred")
+
+# 환경값 받아오기
+def load_env_msg():
+    data = ""
     while True:
-        global temp
         z = s.readline()
-        # print(z)
-        # 내용이 비어있지 않으면 프린트
 
         if not z.decode().startswith("#"):
             z = z.decode()[:len(z) - 1]
+        # if not z.startswith(b"#"):
+        #     z = z[:len(z) - 1]
             if z.startswith("{ \"temp"):
                 data = json.loads(z)
-                temp = int(data["temp"])
-        else:
-            break
-    # if (s.readable()):
-    #     s.write("{}\n".format(msg).encode())
-    print(temp)
-    yield f"{temp}"
-
-def load_humid_msg(msg):
-    # global humid
-    while True:
-        global humid
-        z = s.readline()
-        # print(z)
-        # 내용이 비어있지 않으면 프린트
-
-        if not z.decode().startswith("#"):
-            z = z.decode()[:len(z) - 1]
-            if z.startswith("{ \"temp"):
-                data = json.loads(z)
-                humid = int(data["humidity"])
-        else:
-            break
-    # if (s.readable()):
-    #     s.write("{}\n".format(msg).encode())
-    print(humid)
-    yield f"{humid}"
-
-def load_cdc_msg(msg):
-    # global cdc
-    while True:
-        global cdc
-        z = s.readline()
-        # print(z)
-        # 내용이 비어있지 않으면 프린트
-
-        if not z.decode().startswith("#"):
-            z = z.decode()[:len(z) - 1]
-            if z.startswith("{ \"temp"):
-                data = json.loads(z)
-                cdc = int(data["cdc"])
-        else:
-            break
-    # if (s.readable()):
-    #     s.write("{}\n".format(msg).encode())
-    print(cdc)
-    yield f"{cdc}"
-
-@app.route("/temp_msg")
-@cross_origin(origin='*')
-def temp_msg():
-    load_temp_msg("C_F-0")
-    return Response(load_temp_msg("C_F-0"), mimetype='text')
-
-@app.route("/humid_msg")
-@cross_origin(origin='*')
-def humid_msg():
-    load_humid_msg("C_F-0")
-    return Response(load_humid_msg("C_F-0"), mimetype='text')
-
-@app.route("/cdc_msg")
-@cross_origin(origin='*')
-def cdc_msg():
-    load_cdc_msg("C_F-0")
-    return Response(load_cdc_msg("C_F-0"), mimetype='text')
-
-# def load_env():
-    # z = s.readline()
-    # z = z.decode()[:len(z) - 1]
-    # data = json.loads(z)
-    # temp = int(data["temp"])
-    # humid = int(data['humidity'])
-    # cdc = int(data['cdc'])
-    # print(temp, humid, cdc)
-    # return temp, humid, cdc
-
-# def random_sinegraph():
-#     matplotlib.use('TkAgg')
-#     plt.rcParams["figure.figsize"] = [7.50, 3.50]
-#     plt.rcParams["figure.autolayout"] = True
+                # temp = int(data["temp"])
+                print("내용출력:", end="")
+                print(z)
+                return z
+    return data
 #
-#     temp_threshold = 28
+# # def load_humid_msg():
+# #     global humid
+# #     while True:
+# #         z = s.readline()
+# #         # print(z)
+# #         # 내용이 비어있지 않으면 프린트
+# #
+# #         if not z.decode().startswith("#"):
+# #             z = z.decode()[:len(z) - 1]
+# #             if z.startswith("{ \"temp"):
+# #                 data = json.loads(z)
+# #                 humid = int(data["temp"])
+# #                 print("내용출력:", end="")
+# #                 print(z)
+# #         else:
+# #             break
+# #     yield f"{humid}"
+# #     print(humid)
 #
-#     fig = plt.figure()
-#     ax = plt.axes(xlim=(0, 2), ylim=(18, 32))
-#     ax.set_ylabel("Indoor temperature (degrees C)")
-#     ax.set_xlabel("time line")
-#     line, = ax.plot([], [], lw=2)
+# # def load_cdc_msg():
+# #     global cdc
+# #     while True:
+# #         z = s.readline()
+# #         # print(z)
+# #         # 내용이 비어있지 않으면 프린트
+# #
+# #         if not z.decode().startswith("#"):
+# #             z = z.decode()[:len(z) - 1]
+# #             if z.startswith("{ \"temp"):
+# #                 data = json.loads(z)
+# #                 temp = int(data["cdc"])
+# #                 print("내용출력:", end="")
+# #                 print(z)
+# #         else:
+# #             break
+# #     yield f"{cdc}"
+# #     print(cdc)
 #
-#     plt.axhline(y=temp_threshold, ls="--")
-#     line_color = "b"
-#     stage = -1
+@app.route("/env_msg")
+@cross_origin(origin='*')
+def env_msg():
+    return Response(load_env_msg(), mimetype='application/json')
+
+# @app.route("/humid_msg")
+# @cross_origin(origin='*')
+# def humid_msg():
+#     return Response(load_humid_msg(), mimetype='text')
+#
+#
+# @app.route("/cdc_msg")
+# @cross_origin(origin='*')
+# def cdc_msg():
+#     # load_cdc_msg()
+#     return Response(load_cdc_msg(), mimetype='text')
+
+
+# 선풍기
 
 @app.route('/fan-on')
 def fan_on():
     send_signal_to_sfarm("C_F-1")
-    # load_env()
+    print("fan on")
     return "Order Fan On"
-
-
-
 @app.route('/fan-off')
 def fan_off():
     send_signal_to_sfarm("C_F-0")
+    print("fan off")
     return "Order Fan Off"
 
+# led 조명
 @app.route('/light-on/<level>')
 def light_on(level):
     send_signal_to_sfarm("C_L-{}".format(level))
     return f"Order Light {level}"
-
-# @app.route('/light-on')
-# def light_on():
-#     send_signal_to_sfarm("C_L-10")
-#     return "Order Light 10"
-
 @app.route('/light-off')
 def light_off():
     send_signal_to_sfarm("C_L-0")
     return "Order Light 0"
 
+# 창문
 @app.route('/window-open')
 def window_open():
     send_signal_to_sfarm("C_S-1")
     return "Order window open"
-
 @app.route('/window-close')
 def window_close():
     send_signal_to_sfarm("C_S-0")
     return "Order window close"
+
+# 발열등
+@app.route('/red-on')
+def red_on():
+    send_signal_to_ssfarm("R1")
+    return "Order red on"
+@app.route('/red-off')
+def red_off():
+    send_signal_to_ssfarm("R0")
+    return "Order red off"
+
+# 안개분무기
+@app.route('/blue-on')
+def blue_on():
+    send_signal_to_ssfarm("B1")
+    return "Order blue on"
+@app.route('/blue-off')
+def blue_off():
+    send_signal_to_ssfarm("B0")
+    return "Order blue off"
+
+# 수분공급기
+@app.route('/white-on')
+def white_on():
+    send_signal_to_ssfarm("W1")
+    return "Order red on"
+@app.route('/white-off')
+def white_off():
+    send_signal_to_ssfarm("W0")
+    return "Order white off"
+
+# Co2 발생기
+@app.route('/yellow-on')
+def yellow_on():
+    send_signal_to_ssfarm("Y1")
+    return "Order yellow on"
+@app.route('/yellow-off')
+def yellow_off():
+    send_signal_to_ssfarm("Y0")
+    return "Order yellow off"
+
+# O2 발생기
+@app.route('/green-on')
+def green_on():
+    send_signal_to_ssfarm("G1")
+    return "Order green on"
+@app.route('/green-off')
+def green_off():
+    send_signal_to_ssfarm("G0")
+    return "Order green off"
+
 
 
 app.run(host="0.0.0.0", threaded=True)

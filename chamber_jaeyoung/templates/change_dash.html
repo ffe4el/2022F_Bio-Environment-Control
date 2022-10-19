@@ -9,7 +9,7 @@
     .flower{
       width:150px;
       height:150px;
-      -webkit-animation:flower 3s linear infinite;
+      -webkit-animation:None;
       display: block;
       margin: auto;
     }
@@ -59,7 +59,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="justify-content-between">
       <a href="dash_board.html" class="logo align-items-center">
-        <span class="d-none d-lg-block">Mini - Chamber Smart flatform SDA LAB</span>
+        <span class="d-none d-lg-block">Mini - Chamber Smart platform SDA LAB</span>
       </a>
     </div><!-- End Logo -->
   </header><!-- End Header -->
@@ -78,7 +78,7 @@
                 <div class="card-body">
                   <h5 class="card-title">camera</h5>
                     <div class="img-responsive" align="middle">
-                  <iframe src="http://192.168.0.72:81/stream" width="400px" height="300px"></iframe>
+                  <iframe src="http://192.168.0.66:5000/camera" width="400px" height="300px"></iframe>
                   </div>
                 </div>
               </div>
@@ -90,20 +90,20 @@
                   <div class="row">
                     <div class="col-xxl-6">
                       <h5 class="card-title">data</h5>
-                      <img src="assets/img/seed.jpg" width="310xp" height="250xp" alt="seed" class="img-responsive-rounded" >
+                      <img id="data_img" src="assets/img/seed.jpg" width="310xp" height="250xp" alt="seed" class="img-responsive-rounded" >
                     </div>
                     <div class="col-xxl-6">
-                      <p class="card-title">seed</p>
-                      <p class="card-title">temperature : 15°C</p>
-                      <p class="card-title">humid : 70%</p>
-                      <p class="card-title">lux : 500lx</p>
-                      <p class="card-title">co2 : 300ppm</p>
+                      <p id="state" class="card-title"></p>
+                      <p id="state_value1" class="card-title">temperature : °C</p>
+                      <p id="state_value2" class="card-title">humid : %</p>
+                      <p id="state_value3" class="card-title">lux : lx</p>
+                      <p id="state_value4" class="card-title">co2 : ppm</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- data card -->
+             <!-- data card -->
 <!--            controller-->
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
@@ -114,69 +114,69 @@
                         <div class="flower" >
                         <img src="assets/img/fan.png"  width="150px" height="150px" alt="">
                         </div>
-                      <h5 class="card-title" align="center">fan on</h5>
-<!--                        <label class="switch">-->
-<!--                        <input type="checkbox">-->
-<!--                        <span class="slider round"></span>-->
-<!--                      </label>-->
-                      <input id="toggle-demo" type="checkbox" checked data-toggle="toggle">
+                      <h5 class="card-title" align="center" id="fan-on-off-status">fan</h5>
+                        <label class="switch">
+                        <input  id="toggle-demo" type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+<!--                      <input id="toggle-demo" type="checkbox" checked data-toggle="toggle">-->
                         <!-- Rounded switch -->
                     </div>
                     <div class="col-lg-3" style="text-align: center">
-                        <img src="assets/img/windows_opened.png"  width="150px" height="150px" alt="">
-                      <h5 class="card-title" align="center">window open</h5>
+                        <img id ="win_img" src="assets/img/window_closed.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title"  align="center" id="window-on-off-status">window</h5>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input id="win_btn" type="checkbox">
                         <span class="slider round"></span>
                       </label>
                     </div>
                     <div class="col-lg-3" style="text-align: center">
-                      <img src="assets/img/lightbulb_on.png"  width="150px" height="150px" alt="">
-                      <h5 class="card-title" align="center">light on</h5>
+                      <img id="light_img" src="assets/img/lightbulb_off.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center" id="light-on-off-status">light</h5>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input id="light_btn" type="checkbox">
                         <span class="slider round"></span>
                       </label>
                     </div>
                     <div class="col-lg-3" style="text-align: center">
-                      <img src="assets/img/heater_on.png"  width="150px" height="150px" alt="">
-                      <h5 class="card-title" align="center">heater on</h5>
+                      <img id="heater_img" src="assets/img/heater_off.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center" id="heater-on-off-status">heater</h5>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input id="heater_btn" type="checkbox">
                         <span class="slider round"></span>
                       </label>
                     </div>
                   </div>
                   <div class="row mt-4">
                     <div class="col-lg-3" style="text-align: center">
-                      <img src="assets/img/fog_on.png"  width="150px" height="150px" alt="">
-                      <h5 class="card-title" align="center">fog off</h5>
+                      <img id="fog_img" src="assets/img/fog_off.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center" id="fog-on-off-status">fog</h5>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input id="fog_btn" type="checkbox">
                         <span class="slider round"></span>
                       </label>
                     </div>
                     <div class="col-lg-3" style="text-align: center">
-                      <img src="assets/img/co2_off.png"  width="150px" height="150px" alt="">
-                      <h5 class="card-title" align="center">co2 off</h5>
+                      <img id="co2_img" src="assets/img/co2_off.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center" id="co2-on-off-status">co2</h5>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input id="co2_btn" type="checkbox">
                         <span class="slider round"></span>
                       </label>
                     </div>
                     <div class="col-lg-3" style="text-align: center">
-                      <img src="assets/img/o2_on.png"  width="150px" height="150px" alt="">
-                      <h5 class="card-title" align="center">o2 on</h5>
+                      <img id="o2_img" src="assets/img/o2_off.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center" id="o2-on-off-status">o2</h5>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input id="o2_btn" type="checkbox">
                         <span class="slider round"></span>
                       </label>
                     </div>
                     <div class="col-lg-3" style="text-align: center">
-                      <img src="assets/img/drops_on.png"  width="150px" height="150px" alt="">
-                      <h5 class="card-title" align="center">water on</h5>
+                      <img id="water_img" src="assets/img/drops_off.png"  width="150px" height="150px" alt="">
+                      <h5 class="card-title" align="center" id="water-on-off-status">water</h5>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input id="water_btn" type="checkbox">
                         <span class="slider round"></span>
                       </label>
                     </div>
@@ -189,47 +189,287 @@
         <script>
         setInterval(function()
         {
-            $.ajax({
-                type: "get",
-                url: "http://192.168.0.66:5000/temp_msg",
-                // datatype: "json",
-                success:function(data)
-                {
-                    $("#temp_msg").html(data);
-                }
-            });
-        }, 500); //10000 milliseconds = 10 seconds
-        </script>
-        <script>
+          update_env_status()
+          camera()
+        }, 10000);
         setInterval(function()
         {
-            $.ajax({
-                type: "get",
-                url: "http://192.168.0.66:5000/humid_msg",
-                // datatype: "json",
-                success:function(data)
-                {
-                    $("#humid_msg").html(data);
-                    // console.log(data);
-                }
-            });
-        }, 500); //10000 milliseconds = 10 seconds
-        </script>
-        <script>
-        setInterval(function()
-        {
-            $.ajax({
-                type: "get",
-                url: "http://192.168.0.66:5000/cdc_msg",
-                // datatype: "json",
-                success:function(data)
-                {
-                    $("#cdc_msg").html(data);
-                    // console.log(data);
-                }
-            });
-        }, 500); //10000 milliseconds = 10 seconds
+          camera()
+        }, 5000);
+        // setInterval(function()
+        // {
+        //   camera()
+        // }, 500);//10000 milliseconds = 10 seconds
+        // setInterval(function()
+        // {
+        //     $.ajax({
+        //         type: "get",
+        //         url: "http://192.168.0.66:5000/humid_msg",
+        //         success:function(data)
+        //         {
+        //             $("#humid_msg").html(data);
+        //             // console.log(data);
+        //         }
+        //     });
+        // }, 500); //10000 milliseconds = 10 seconds
+        // setInterval(function()
+        // {
+        //     $.ajax({
+        //         type: "get",
+        //         url: "http://192.168.0.66:5000/cdc_msg",
+        //         success:function(data)
+        //         {
+        //             $("#cdc_msg").html(data);
+        //             // console.log(data);
+        //         }
+        //     });
+        // }, 500); //10000 milliseconds = 10 seconds
+function camera() {
+ $.ajax({
+   type: "get",
+   url: "http://192.168.0.66:5000/current_msg",
+   success: function (data) {
+     $("#state").html(data);
+       if (data === "NO") {
+         $("#state_value1").html("temperature : °C")
+         $("#state_value2").html("humid : %")
+         $("#state_value3").html("lux : lx")
+         $("#state_value4").html("co2 : ppm")
+         document.getElementById("data_img").src="assets/img/waiting_farmer.png";
+     }
+       if (data === "seed") {
+         $("#state_value1").html("temperature : 1°C")
+         $("#state_value2").html("humid : 1%")
+         $("#state_value3").html("lux : 1lx")
+         $("#state_value4").html("co2 : 1ppm")
+         document.getElementById("data_img").src="assets/img/seed.jpg";
+     }
+       if (data === "sprout") {
+         $("#state_value1").html("temperature : 2°C")
+         $("#state_value2").html("humid : 2%")
+         $("#state_value3").html("lux : 2lx")
+         $("#state_value4").html("co2 : 2ppm")
+         document.getElementById("data_img").src="assets/img/baby.jpg";
 
+     }
+      if (data === "growth") {
+       $("#state_value1").html("temperature : 3°C")
+       $("#state_value2").html("humid : 3%")
+       $("#state_value3").html("lux : 3lx")
+       $("#state_value4").html("co2 : 3ppm")
+        document.getElementById("data_img").src="assets/img/growing.jpg";
+
+     }
+      if (data === "flower") {
+       $("#state_value1").html("temperature : 4°C")
+       $("#state_value2").html("humid : 4%")
+       $("#state_value3").html("lux : 4lx")
+       $("#state_value4").html("co2 : 4ppm")
+       document.getElementById("data_img").src="assets/img/flower.jpg";
+     }
+       if (data === "fruit") {
+       $("#state_value1").html("temperature : 5°C")
+       $("#state_value2").html("humid : 5%")
+       $("#state_value3").html("lux : 5lx")
+       $("#state_value4").html("co2 : 5ppm")
+       document.getElementById("data_img").src="assets/img/tomato.jpg";
+
+     }
+   }
+ });
+}
+
+
+function update_env_status() {
+    $.ajax({
+      type: "get",
+      url: "http://192.168.0.66:5000/env_msg",
+      success:function(data)
+      {
+          // console.log(data);
+          $("#temp_msg").html(data["temp"]);
+          $("#humid_msg").html(data["humidity"]);
+          $("#cdc_msg").html(data["cdc"]);
+          $("#co2_msg").html(data["co2"]);
+      }
+  });
+}
+
+var fan_btn = $("#toggle-demo");
+fan_btn.change(function() {
+  if (this.checked) {
+    $.ajax({
+      type: "get",
+      url: "http://192.168.0.66:5000/fan-on",
+    });
+      $("#fan-on-off-status").html("fan <font color='red'>on</font>");
+      $(".flower").css("-webkit-animation", "flower 3s linear infinite");
+  } else {
+      $.ajax({
+      type: "get",
+      url: "http://192.168.0.66:5000/fan-off",
+    });
+    $("#fan-on-off-status").html("fan off");
+    $(".flower").css("-webkit-animation", "none");
+  }
+
+});
+
+var window_btn = $("#win_btn");
+window_btn.change(function() {
+if (this.checked) {
+  $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/window-open",
+  });
+    $("#window-on-off-status").html("window <font color='red'>open</font>");
+     document.getElementById("win_img").src="assets/img/windows_opened.png";
+
+} else {
+    $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/window-close",
+  });
+  $("#window-on-off-status").html("window closed");
+  document.getElementById("win_img").src="assets/img/window_closed.png";
+}
+
+});
+
+var light_btn = $("#light_btn");
+light_btn.change(function() {
+if (this.checked) {
+  $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/light-on/10",
+  });
+    $("#light-on-off-status").html("light <font color='red'>on</font>");
+     document.getElementById("light_img").src="assets/img/lightbulb_on.png";
+
+} else {
+    $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/light-on/0",
+  });
+  $("#light-on-off-status").html("light off");
+  document.getElementById("light_img").src="assets/img/lightbulb_off.png";
+
+}
+
+});
+
+var heater_btn = $("#heater_btn");
+heater_btn.change(function() {
+if (this.checked) {
+  $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/red-on",
+  });
+    $("#heater-on-off-status").html("heater <font color='red'>on</font>");
+     document.getElementById("heater_img").src="assets/img/heater_on.png";
+
+} else {
+    $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/red-off",
+  });
+  $("#heater-on-off-status").html("heater off");
+  document.getElementById("heater_img").src="assets/img/heater_off.png";
+
+}
+
+});
+
+var fog_btn = $("#fog_btn");
+fog_btn.change(function() {
+if (this.checked) {
+  $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/blue-on",
+  });
+    $("#fog-on-off-status").html("fog <font color='red'>on</font>");
+     document.getElementById("fog_img").src="assets/img/fog_on.png";
+
+} else {
+    $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/blue-off",
+  });
+  $("#fog-on-off-status").html("fog off");
+  document.getElementById("fog_img").src="assets/img/fog_off.png";
+
+}
+
+});
+
+var water_btn = $("#water_btn");
+water_btn.change(function() {
+if (this.checked) {
+  $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/white-on",
+  });
+    $("#water-on-off-status").html("water <font color='red'>on</font>");
+     document.getElementById("water_img").src="assets/img/drops_on.png";
+
+} else {
+    $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/white-off",
+  });
+  $("#water-on-off-status").html("water off");
+  document.getElementById("water_img").src="assets/img/drops_off.png";
+
+}
+
+});
+
+var o2_btn = $("#o2_btn");
+o2_btn.change(function() {
+if (this.checked) {
+  $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/green-on",
+  });
+    $("#o2-on-off-status").html("o2 <font color='red'>on</font>");
+     document.getElementById("o2_img").src="assets/img/o2_on.png";
+
+} else {
+    $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/green-off",
+  });
+  $("#o2-on-off-status").html("o2 off");
+  document.getElementById("o2_img").src="assets/img/o2_off.png";
+
+}
+
+});
+
+var co2_btn = $("#co2_btn");
+co2_btn.change(function() {
+if (this.checked) {
+  $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/yellow-on",
+  });
+    $("#co2-on-off-status").html("co2 <font color='red'>on</font>");
+     document.getElementById("co2_img").src="assets/img/co2_on.png";
+
+} else {
+    $.ajax({
+    type: "get",
+    url: "http://192.168.0.66:5000/yellow-off",
+  });
+  $("#co2-on-off-status").html("co2 off");
+  document.getElementById("co2_img").src="assets/img/co2_off.png";
+
+}
+
+});
+
+camera()
+update_env_status()
         </script>
         <!-- Right side columns -->
         <div class="col-lg-6">
@@ -239,12 +479,12 @@
                 <div class="col-lg-3">
                   <h5 class="card-title">temperature</h5>
                   <img src="assets/img/thermometer.png" alt="temperture" height="150px" class="img-responsive-rounded">
-                  <div class="card-title" id="temp_msg"></div>
+                  <h4 class="card-title" id="temp_msg"></h4>
                 </div>
                 <div class="col-lg-3">
                   <h5 class="card-title">humid</h5>
                   <img src="assets/img/humid.png" alt="humid" width="150xp" height="150px" class="img-responsive-rounded align-items-center">
-                  <div class="card-title" id="humid_msg"></div>
+                  <h4 class="card-title" id="humid_msg"></h4>
                 </div>
                 <div class="col-lg-3">
                   <h5 class="card-title">lux</h5>
@@ -254,6 +494,7 @@
                 <div class="col-lg-3">
                   <h5 class="card-title">co2</h5>
                   <img src="assets/img/co2.png" alt="co2" width="150xp" height="150px" class="img-responsive-rounded align-items-center" >
+                  <div class="card-title" id="co2_msg"></div>
                 </div>
               </div>
             </div><!-- End activity item-->

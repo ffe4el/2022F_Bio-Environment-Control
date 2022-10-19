@@ -20,8 +20,9 @@
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/bio_env/value_print.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/bio_env/value_print.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/control_serv_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/control_serv_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/hi_dash.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/hi_dash.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/hihihi.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/hihihi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/hihihi2.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/hihihi2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/hihihi.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_sola/value_change.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/hihihi2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/keras_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/keras_model.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/labels.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/templates/assets/js/main.js" afterDir="false" />
@@ -545,7 +546,7 @@
       <change beforePath="$PROJECT_DIR$/chamber_sola/templates/change_dash.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_sola/templates/change_dash.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_sola/templates/dash_board.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_sola/templates/dash_board.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_sola/templates/dash_board_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_sola/templates/dash_board_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chamber_sola/value_print_sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_sola/value_print_sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_sola/value_print_sol.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/control_serv1.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_serv1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -556,8 +557,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -583,29 +584,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/OneDrive/바탕 화면/sol/2022F_Bio-Environment-Control/chamber_sola&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/sol/2022F_Bio-Environment-Control/chamber_jaeyoung",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung" />
+      <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung\templates" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_sola" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung\bio_env" />
-      <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung\templates" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_hyejin" />
-      <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control\chamber_jaeyoung" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung\templates\assets\img" />
+      <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung" />
+      <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung\test" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_jaeyoung\templates" />
       <recent name="C:\Users\user\OneDrive\바탕 화면\2022F_Bio-Environment-Control" />
     </key>
@@ -706,8 +710,8 @@
       <list>
         <item itemvalue="Python.value_change" />
         <item itemvalue="JavaScript 디버그.change_dash.html" />
-        <item itemvalue="Python.value_print_sol" />
         <item itemvalue="Python.hihihi2" />
+        <item itemvalue="Python.value_print_sol" />
         <item itemvalue="Python.hihihi" />
       </list>
     </recent_temporary>
@@ -747,13 +751,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv_2.coverage" NAME="control_serv_2 커버리지 결과" MODIFIED="1665817258453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
-    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$value_change.coverage" NAME="value_change 커버리지 결과" MODIFIED="1665935807782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$value_change.coverage" NAME="value_change 커버리지 결과" MODIFIED="1666162469989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv__1_.coverage" NAME="control_serv (1) 커버리지 결과" MODIFIED="1665914783286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$esp32_pycharm.coverage" NAME="esp32_pycharm 커버리지 결과" MODIFIED="1664960402702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$value_print_sol.coverage" NAME="value_print_sol 커버리지 결과" MODIFIED="1665935184356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_sola" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$esp32_pycharm__1_.coverage" NAME="esp32_pycharm (1) 커버리지 결과" MODIFIED="1664956829797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/classification_card" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$test.coverage" NAME="test 커버리지 결과" MODIFIED="1665912528618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung/test" />
-    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$hihihi2.coverage" NAME="hihihi2 커버리지 결과" MODIFIED="1665931758976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
+    <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$hihihi2.coverage" NAME="hihihi2 커버리지 결과" MODIFIED="1665977017736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$value_print.coverage" NAME="value_print 커버리지 결과" MODIFIED="1665845414582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$cam_python.coverage" NAME="cam_python 커버리지 결과" MODIFIED="1665051520716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/2022F_Bio_Environment_Control$control_serv.coverage" NAME="control_serv 커버리지 결과" MODIFIED="1665912264745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chamber_jaeyoung/bio_env" />
