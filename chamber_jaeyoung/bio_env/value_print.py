@@ -33,7 +33,7 @@ def send_signal_to_sfarm(msg):
 def send_signal_to_ssfarm(msg):
     if (ss.readable()):
         ss.write("{}\n".format(msg).encode())
-        time.sleep(0.2)
+        # time.sleep(0.2)
 
 # 환경변화에 따라 소리 내기
 def beepsound():
@@ -61,6 +61,7 @@ def summer_first():
     send_signal_to_ssfarm("W1")
     # sound
     beepsound()
+    print()
 
 # 여름 2단계
 def summer_second():
