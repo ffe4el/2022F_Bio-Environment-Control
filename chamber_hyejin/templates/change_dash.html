@@ -294,12 +294,79 @@ function control_env() {
            document.getElementById("o2_btn").checked = data["o2_btn"] === "on" ? true: false;
            document.getElementById("water_btn").checked = data["water_btn"] === "on" ? true: false;
 
+
           if (data["water_btn"] === "on") {
-           document.getElementById("water_img").src="assets/img/drops_on.png";
+            $("#water-on-off-status").html("water <font color='red'>on</font>");
+            document.getElementById("water_img").src="assets/img/drops_on.png";
           }
            else {
+            $("#water-on-off-status").html("water off");
            document.getElementById("water_img").src="assets/img/drops_off.png";
             }
+
+            if (data["toggle-demo"] === "on") {
+            $("#fan-on-off-status").html("fan <font color='red'>on</font>");
+            $(".flower").css("-webkit-animation", "flower 3s linear infinite");
+          }
+           else {
+            $("#fan-on-off-status").html("fan off");
+            $(".flower").css("-webkit-animation", "none");
+            }
+
+           if (data["win_btn"] === "on") {
+            $("#win-on-off-status").html("window <font color='red'>on</font>");
+            document.getElementById("win_img").src="assets/img/windows_opened.png";
+          }
+           else {
+            $("#win-on-off-status").html("window off");
+           document.getElementById("win_img").src="assets/img/windows_closed.png";
+            }
+
+             if (data["heater_btn"] === "on") {
+            $("#heater-on-off-status").html("heater <font color='red'>on</font>");
+            document.getElementById("heater_img").src="assets/img/heater_on.png";
+          }
+           else {
+            $("#heater-on-off-status").html("heater off");
+           document.getElementById("heater_img").src="assets/img/heater_off.png";
+            }
+
+             if (data["light_btn"] === "on") {
+            $("#light-on-off-status").html("light <font color='red'>on</font>");
+            document.getElementById("light_img").src="assets/img/lightbulb_on.png";
+          }
+           else {
+            $("#light-on-off-status").html("light off");
+           document.getElementById("light_img").src="assets/img/lightbulb_off.png";
+            }
+
+             if (data["fog_btn"] === "on") {
+            $("#fog-on-off-status").html("fog <font color='red'>on</font>");
+            document.getElementById("fog_img").src="assets/img/fog_on.png";
+          }
+           else {
+            $("#fog-on-off-status").html("fog off");
+           document.getElementById("fog_img").src="assets/img/fog_off.png";
+            }
+
+             if (data["o2_btn"] === "on") {
+            $("#o2-on-off-status").html("o2 <font color='red'>on</font>");
+            document.getElementById("o2_img").src="assets/img/o2_on.png";
+          }
+           else {
+            $("#o2-on-off-status").html("o2 off");
+           document.getElementById("o2_img").src="assets/img/o2_off.png";
+            }
+
+             if (data["co2_btn"] === "on") {
+            $("#co2-on-off-status").html("co2 <font color='red'>on</font>");
+            document.getElementById("co2_img").src="assets/img/co2_on.png";
+          }
+           else {
+            $("#co2-on-off-status").html("co2 off");
+           document.getElementById("co2_img").src="assets/img/co2_off.png";
+            }
+
 
       }
   });
