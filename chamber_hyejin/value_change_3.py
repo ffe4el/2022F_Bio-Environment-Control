@@ -675,7 +675,7 @@ print(df.head())
 
 @app.route("/msg_growth")
 @cross_origin(origin='*')
-def msg_growth():
+def msg_growth_func():
     msg_growth_str = msg_growth
     record = df[df["season_level"] == msg_growth_str]
 

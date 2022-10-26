@@ -78,7 +78,7 @@
                 <div class="card-body">
                   <h5 class="card-title">camera</h5>
                     <div class="img-responsive" align="middle">
-                  <iframe src="http://192.168.0.66:5000/camera" width="400px" height="300px"></iframe>
+                  <iframe src="http://192.168.0.66:5001/camera" width="400px" height="300px"></iframe>
                   </div>
                 </div>
               </div>
@@ -96,7 +96,6 @@
                       <p id="state" class="card-title"></p>
                       <p id="state_value1" class="card-title">temperature : °C</p>
                       <p id="state_value2" class="card-title">humid : %</p>
-                      <p id="state_value3" class="card-title">lux : lx</p>
                       <p id="state_value4" class="card-title">co2 : ppm</p>
                     </div>
                   </div>
@@ -210,51 +209,45 @@
 function camera() {
  $.ajax({
    type: "get",
-   url: "http://192.168.0.66:5000/current_msg",
+   url: "http://192.168.0.66:5001/current_msg",
    success: function (data) {
      $("#state").html(data);
        if (data === "NO") {
          $("#state_value1").html("temperature : °C")
          $("#state_value2").html("humid : %")
-         $("#state_value3").html("lux : lx")
          $("#state_value4").html("co2 : ppm")
          document.getElementById("data_img").src="assets/img/waiting_farmer.png";
      }
        if (data === "seed") {
-         $("#state_value1").html("temperature : 1°C")
-         $("#state_value2").html("humid : 1%")
-         $("#state_value3").html("lux : 1lx")
-         $("#state_value4").html("co2 : 1ppm")
+         $("#state_value1").html("temperature : 28°C")
+         $("#state_value2").html("humid : 70%")
+         $("#state_value4").html("co2 : 700ppm")
          document.getElementById("data_img").src="assets/img/seed.jpg";
      }
        if (data === "sprout") {
-         $("#state_value1").html("temperature : 2°C")
-         $("#state_value2").html("humid : 2%")
-         $("#state_value3").html("lux : 2lx")
-         $("#state_value4").html("co2 : 2ppm")
+         $("#state_value1").html("temperature : 23°C")
+         $("#state_value2").html("humid : 75%")
+         $("#state_value4").html("co2 : 700ppm")
          document.getElementById("data_img").src="assets/img/baby.jpg";
 
      }
       if (data === "growth") {
-       $("#state_value1").html("temperature : 3°C")
-       $("#state_value2").html("humid : 3%")
-       $("#state_value3").html("lux : 3lx")
-       $("#state_value4").html("co2 : 3ppm")
+       $("#state_value1").html("temperature : (day : 25°C night : 17°C)")
+       $("#state_value2").html("humid : 75%")
+       $("#state_value4").html("co2 : 700ppm")
         document.getElementById("data_img").src="assets/img/growing.jpg";
 
      }
       if (data === "flower") {
-       $("#state_value1").html("temperature : 4°C")
-       $("#state_value2").html("humid : 4%")
-       $("#state_value3").html("lux : 4lx")
-       $("#state_value4").html("co2 : 4ppm")
+       $("#state_value1").html("temperature : 25°C")
+       $("#state_value2").html("humid : 70%")
+       $("#state_value4").html("co2 : 700ppm")
        document.getElementById("data_img").src="assets/img/flower.jpg";
      }
        if (data === "fruit") {
-       $("#state_value1").html("temperature : 5°C")
-       $("#state_value2").html("humid : 5%")
-       $("#state_value3").html("lux : 5lx")
-       $("#state_value4").html("co2 : 5ppm")
+       $("#state_value1").html("temperature : 17°C")
+       $("#state_value2").html("humid : 60%")
+       $("#state_value4").html("co2 : 700ppm")
        document.getElementById("data_img").src="assets/img/tomato.jpg";
 
      }
@@ -298,10 +291,12 @@ function control_env() {
           if (data["water_btn"] === "on") {
             $("#water-on-off-status").html("water <font color='red'>on</font>");
             document.getElementById("water_img").src="assets/img/drops_on.png";
+            $("#water_img").addClass("border border-dark border-5");
           }
            else {
             $("#water-on-off-status").html("water off");
            document.getElementById("water_img").src="assets/img/drops_off.png";
+           $("#water_img").removeClass("border border-dark border-5");
             }
 
             if (data["toggle-demo"] === "on") {
@@ -314,21 +309,25 @@ function control_env() {
             }
 
            if (data["win_btn"] === "on") {
-            $("#win-on-off-status").html("window <font color='red'>on</font>");
+            $("#window-on-off-status").html("window <font color='red'>on</font>");
             document.getElementById("win_img").src="assets/img/windows_opened.png";
           }
            else {
-            $("#win-on-off-status").html("window off");
-           document.getElementById("win_img").src="assets/img/windows_closed.png";
+            $("#window-on-off-status").html("window off");
+           document.getElementById("win_img").src="assets/img/window_closed.png";
             }
 
              if (data["heater_btn"] === "on") {
             $("#heater-on-off-status").html("heater <font color='red'>on</font>");
-            document.getElementById("heater_img").src="assets/img/heater_on.png";
+
+               document.getElementById("heater_img").src="assets/img/heater_on.png";
+               document.getElementById("heater_img").padding="20px";
+               $("#heater_img").addClass("bg-danger");
           }
            else {
             $("#heater-on-off-status").html("heater off");
            document.getElementById("heater_img").src="assets/img/heater_off.png";
+           $("#heater_img").removeClass("bg-danger");
             }
 
              if (data["light_btn"] === "on") {
@@ -343,28 +342,34 @@ function control_env() {
              if (data["fog_btn"] === "on") {
             $("#fog-on-off-status").html("fog <font color='red'>on</font>");
             document.getElementById("fog_img").src="assets/img/fog_on.png";
+            $("#fog_img").addClass("bg-info");
           }
            else {
             $("#fog-on-off-status").html("fog off");
            document.getElementById("fog_img").src="assets/img/fog_off.png";
+           $("#fog_img").removeClass("bg-info");
             }
 
              if (data["o2_btn"] === "on") {
             $("#o2-on-off-status").html("o2 <font color='red'>on</font>");
             document.getElementById("o2_img").src="assets/img/o2_on.png";
+            $("#o2_img").addClass("bg-success");
           }
            else {
             $("#o2-on-off-status").html("o2 off");
            document.getElementById("o2_img").src="assets/img/o2_off.png";
+           $("#o2_img").removeClass("bg-success");
             }
 
              if (data["co2_btn"] === "on") {
             $("#co2-on-off-status").html("co2 <font color='red'>on</font>");
             document.getElementById("co2_img").src="assets/img/co2_on.png";
+            $("#co2_img").addClass("bg-warning");
           }
            else {
             $("#co2-on-off-status").html("co2 off");
            document.getElementById("co2_img").src="assets/img/co2_off.png";
+           $("#o2_img").removeClass("bg-warning");
             }
 
 
@@ -583,7 +588,7 @@ control_env();
                     <div class ="col-lg-6">
                       <div class="card">
                         <div class="card-body">
-                          <h5 class="card-title">temperature<span>/week</span></h5>
+                          <h5 class="card-title">temperature<span>/day</span></h5>
                           <div id="Chart1"></div>
                           <script>
                               document.addEventListener("DOMContentLoaded", () => {
@@ -638,7 +643,7 @@ control_env();
                       <div class="col-lg-6">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">humid<span>/week</span></h5>
+                            <h5 class="card-title">humid<span>/day</span></h5>
                             <!-- Line Chart -->
                             <div id="Chart2"></div>
                             <script>
@@ -698,7 +703,7 @@ control_env();
               <div class ="col-lg-6">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">lux<span>/week</span></h5>
+                    <h5 class="card-title">lux<span>/day</span></h5>
                     <div id="Chart3"></div>
                     <script>
                       document.addEventListener("DOMContentLoaded", () => {
@@ -753,7 +758,7 @@ control_env();
               <div class="col-lg-6">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title">co2<span>/week</span></h5>
+                    <h5 class="card-title">co2<span>/day</span></h5>
                     <!-- Line Chart -->
                     <div id="Chart4"></div>
                     <script>
