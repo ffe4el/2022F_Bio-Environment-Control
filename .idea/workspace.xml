@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9aa41eb9-77a4-4225-9fe6-04083d525236" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/chamber_hyejin/value_change_api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chamber_hyejin/value_change_camera.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chamber_hyejin/value_change_scenario.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2022F_Bio-Environment-Control.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -31,6 +28,9 @@
       <change beforePath="$PROJECT_DIR$/chamber_hyejin/templates/change_dash.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/templates/change_dash.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_hyejin/value_change_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/value_change_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_hyejin/value_change_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/value_change_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_hyejin/value_change_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/value_change_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_hyejin/value_change_camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/value_change_camera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chamber_hyejin/value_change_scenario.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/value_change_scenario.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_hyejin/value_print_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_hyejin/value_print_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/bio_env/control_serv.py" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/bio_env/control_serv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chamber_jaeyoung/bio_env/dash_board_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/chamber_jaeyoung/bio_env/dash_board_test.html" afterDir="false" />
@@ -601,20 +601,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/OneDrive/바탕 화면/sol/2022F_Bio-Environment-Control/chamber_hyejin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/user/OneDrive/바탕 화면/sol/2022-2/응소/mid_jango",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\OneDrive\바탕 화면\sol\2022F_Bio-Environment-Control\chamber_hyejin" />
@@ -753,7 +753,7 @@
       <workItem from="1666441913190" duration="2662000" />
       <workItem from="1666448068019" duration="20195000" />
       <workItem from="1666702173400" duration="13635000" />
-      <workItem from="1666772354198" duration="9255000" />
+      <workItem from="1666772354198" duration="10923000" />
     </task>
     <servers />
   </component>
