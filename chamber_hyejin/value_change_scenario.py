@@ -477,39 +477,6 @@ def play():
         print("sce:rain-2")
         rain_second()
         time.sleep(10)
-        # # schedule 실행
-        # schedule.run_pending()
-        #
-        # # 발아 적온
-        # schedule.every(10).seconds.do(summer_first)
-        # schedule.every(10).seconds.do(winter_first)
-        # schedule.every(10).seconds.do(rain_first)
-        #
-        # # 육묘 적온
-        # schedule.every(10).seconds.do(summer_second)
-        # schedule.every(10).seconds.do(winter_second)
-        # schedule.every(10).seconds.do(rain_second)
-        #
-        # # 생육 낮 적온
-        # schedule.every(10).seconds.do(summer_third1)
-        # schedule.every(10).seconds.do(winter_third1)
-        # schedule.every(10).seconds.do(rain_third1)
-        #
-        # # 생육 밤 적온
-        # schedule.every(10).seconds.do(summer_third2)
-        # schedule.every(10).seconds.do(winter_third2)
-        # schedule.every(10).seconds.do(rain_third2)
-        #
-        # # 개화 적온
-        # schedule.every(10).seconds.do(summer_forth)
-        # schedule.every(10).seconds.do(winter_forth)
-        # schedule.every(10).seconds.do(rain_forth)
-        #
-        #
-        # # 과비대 적온
-        # schedule.every(10).seconds.do(summer_fifth)
-        # schedule.every(10).seconds.do(winter_fifth)
-        # schedule.every(10).seconds.do(rain_fifth)
 
         if keyboard.is_pressed("q"):
             break
