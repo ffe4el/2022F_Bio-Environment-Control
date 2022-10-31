@@ -330,13 +330,13 @@ function control_env() {
            $("#heater_img").removeClass("bg-danger");
             }
 
-             if (data["light_btn"] === "on") {
-            $("#light-on-off-status").html("light <font color='red'>on</font>");
-            document.getElementById("light_img").src="assets/img/lightbulb_on.png";
-          }
+           if (data["light_btn"] === "C_L-0") {
+             $("#light-on-off-status").html("light off");
+              document.getElementById("light_img").src="assets/img/lightbulb_off.png";
+               }
            else {
-            $("#light-on-off-status").html("light off");
-           document.getElementById("light_img").src="assets/img/lightbulb_off.png";
+             $("#light-on-off-status").html("light <font color='red'>on</font>");
+              document.getElementById("light_img").src="assets/img/lightbulb_on.png";
             }
 
              if (data["fog_btn"] === "on") {
